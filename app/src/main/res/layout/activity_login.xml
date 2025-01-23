@@ -49,7 +49,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="18dp"
             android:fontFamily="sans-serif"
             android:paddingLeft="5dp"
             android:text="Correo electrónico "
@@ -57,7 +57,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:background="@drawable/rounded_text_input_layout"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -70,6 +70,71 @@
 
                 />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="5dp"
+            android:text="Contraseña"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_text_input_layout"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:boxStrokeWidth="0dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/outline_visibility_24"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="35dp"
+            android:text="INICIAR SESIÓN"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/black"
+            app:cornerRadius="10dp"
+            android:elevation="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="5dp"
+                android:text="¿No tienes cuenta?"
+                android:textAlignment="viewEnd" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Regístrate"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 
