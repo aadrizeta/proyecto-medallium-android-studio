@@ -9,7 +9,7 @@
     android:background="@drawable/background2"
     >
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/App_logo"
         android:layout_width="141dp"
         android:layout_height="142dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,13 +22,13 @@
     <LinearLayout
         android:layout_width="348dp"
         android:layout_height="435dp"
-        android:background="@drawable/login_rounded_container"
+        android:background="@drawable/rounded_container"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/App_logo"
         app:layout_constraintVertical_bias="0.255"
         android:paddingVertical="20dp"
         android:paddingHorizontal="20dp"
@@ -38,7 +38,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/poppins"
             android:text="¡Bienvenido a Medallium!"
             android:textAlignment="center"
             android:textColor="#020202"
@@ -50,12 +50,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/montserrat"
             android:paddingLeft="5dp"
             android:text="Correo electrónico "
             android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_input_layout"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@drawable/rounded_text_input_layout"
@@ -76,12 +77,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/montserrat"
             android:paddingLeft="5dp"
             android:text="Contraseña"
             android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_layout"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@drawable/rounded_text_input_layout"
@@ -90,13 +92,14 @@
             app:boxStrokeWidth="0dp"
             app:passwordToggleEnabled="true"
             app:passwordToggleDrawable="@drawable/outline_visibility_24"
-
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
+                android:inputType="textPassword"
+                android:importantForAutofill="no"
+                android:autofillHints="none"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,33 +108,37 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="35dp"
-            android:text="INICIAR SESIÓN"
             android:backgroundTint="@color/green"
+            android:elevation="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="INICIAR SESIÓN"
             android:textColor="@color/black"
-            app:cornerRadius="10dp"
-            android:elevation="50dp"/>
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingEnd="10dp">
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:paddingEnd="5dp"
                 android:text="¿No tienes cuenta?"
                 android:textAlignment="viewEnd" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/register_clickable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Regístrate"
                 android:textStyle="bold" />
         </LinearLayout>
