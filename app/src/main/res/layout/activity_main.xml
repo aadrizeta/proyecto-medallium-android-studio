@@ -16,4 +16,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:circularflow_radiusInDP="50dp"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="133dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
