@@ -129,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
                 android:paddingEnd="5dp"
                 android:text="¿No tienes cuenta?"
                 android:textAlignment="viewEnd" />
@@ -139,6 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
                 android:text="Regístrate"
                 android:textStyle="bold" />
         </LinearLayout>
