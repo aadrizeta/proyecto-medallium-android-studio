@@ -1,4 +1,4 @@
-# medallium_backend
+# Medallium (Android Studio)
 
 Medallium es una herramienta esencial para todos los fans de Yo-Kai Watch, ofreciendo un catálogo completo de Yo-Kai con descripciones, habilidades y 
 evoluciones, funciones de búsqueda avanzadas, guía de localización y consejos para capturar y utilizar Yo-Kai.
