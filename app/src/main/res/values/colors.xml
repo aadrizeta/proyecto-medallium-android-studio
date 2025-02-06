@@ -15,5 +15,6 @@
     <color name="tribu_color_hagure">#022872</color>
     <color name="main_background">#EEEEEE</color>
     <color name="green">#1BBF83</color>
+    <color name="button_shadow">#dddada</color>
 
 </resources>
