@@ -15,5 +15,10 @@
     <color name="tribu_color_hagure">#022872</color>
     <color name="main_background">#EEEEEE</color>
     <color name="green">#1BBF83</color>
-
+    <color name="button_shadow">#dddada</color>
+    <color name="searchview_border">#C1C1C1</color>
+    <color name="botonTribus">#DF89BA</color>
+    <color name="botonElementos">#6ABE4E</color>
+    <color name="botonRango">#8B87C0</color>
+    <color name="botonFase">#28BBEE</color>
 </resources>

@@ -21,17 +21,31 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         TextView registerClickable = findViewById(R.id.register_clickable);
+        Button loginButton = findViewById(R.id.login_button);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchHomeScreen();
+            }
+        });
 
         registerClickable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchRegister();
-
             }
         });
     }
+
     public void launchRegister() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
+
+    public void launchHomeScreen() {
+        Intent intent = new Intent(this, HomeScreen.class);
+        startActivity(intent);
+    }
+
 }
