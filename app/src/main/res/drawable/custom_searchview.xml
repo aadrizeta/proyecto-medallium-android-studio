@@ -3,7 +3,7 @@
     <solid android:color="@color/white"/>
 
     <stroke
-        android:color="@color/black"
+        android:color="@color/searchview_border"
         android:width="2dp" />
 
     <corners android:radius="70dp" />
