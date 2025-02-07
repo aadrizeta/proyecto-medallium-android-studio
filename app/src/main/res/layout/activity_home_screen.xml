@@ -9,8 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,22 +19,23 @@
 
         <ImageView
             android:id="@+id/menuBar"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="27dp"
-            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/baseline_menu_24" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewLogo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:elevation="10dp"
             app:cardCornerRadius="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="8dp"
             android:layout_marginRight="27dp"
             >
@@ -52,7 +53,7 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         style="@style/CustomSearchViewStyle"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:queryHint="Introduzca Yokai"
         app:layout_constraintTop_toBottomOf="@+id/header"
@@ -65,7 +66,7 @@
         android:id="@+id/cardViewButton_tribus"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="40dp"
         android:backgroundTint="@color/button_shadow"
         app:cardCornerRadius="30dp"
@@ -93,7 +94,7 @@
         android:id="@+id/cardViewButton_elementos"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="40dp"
         android:backgroundTint="@color/button_shadow"
         app:cardCornerRadius="30dp"
@@ -193,14 +194,14 @@
             android:textSize="24dp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/populares_guapo"
             android:layout_width="280dp"
             android:layout_height="100dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/yokai_view_guapa"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -223,7 +224,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/favButton"
+                android:id="@+id/favButton1"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginRight="20dp"
@@ -263,7 +264,7 @@
             android:layout_width="280dp"
             android:layout_height="100dp"
             android:orientation="vertical"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/yokai_view_valiente"
             app:layout_constraintTop_toBottomOf="@+id/populares_guapo"
             app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +287,7 @@
                 />
 
             <ImageView
-                android:id="@+id/favButton"
+                android:id="@+id/favButton2"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginRight="20dp"
@@ -327,7 +328,7 @@
             android:layout_width="280dp"
             android:layout_height="100dp"
             android:orientation="vertical"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/yokai_view_misterioso"
             app:layout_constraintTop_toBottomOf="@+id/populares_valiente"
             app:layout_constraintStart_toStartOf="parent"
@@ -350,11 +351,11 @@
                 />
 
             <ImageView
-                android:id="@+id/favButton"
+                android:id="@+id/favButton3"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/favorite_heart" />
