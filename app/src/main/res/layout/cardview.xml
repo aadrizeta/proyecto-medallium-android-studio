@@ -38,7 +38,7 @@
             android:layout_marginRight="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/favorite_heart" />
+            app:srcCompat="@drawable/usable_icon_favorite_heart" />
 
         <TextView
             android:id="@+id/textView_jibanyan_jp"
@@ -62,7 +62,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_jibanyan_jp"
-            app:srcCompat="@drawable/guapo" />
+            app:srcCompat="@drawable/tribe_icon_small_guapo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -99,7 +99,7 @@
             android:layout_marginRight="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/favorite_heart" />
+            app:srcCompat="@drawable/usable_icon_favorite_heart" />
 
         <TextView
             android:id="@+id/textView_shogunyan_jp"
@@ -123,7 +123,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_shogunyan_jp"
-            app:srcCompat="@drawable/valiente" />
+            app:srcCompat="@drawable/tribe_icon_small_valiente" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -160,7 +160,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/favorite_heart" />
+            app:srcCompat="@drawable/usable_icon_favorite_heart" />
 
         <TextView
             android:id="@+id/textView_kyubi_jp"
@@ -184,7 +184,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_kyubi_jp"
-            app:srcCompat="@drawable/misterioso" />
+            app:srcCompat="@drawable/tribe_icon_small_misterioso" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
