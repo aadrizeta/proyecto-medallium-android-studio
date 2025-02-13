@@ -21,6 +21,7 @@
         android:elevation="20dp"
         app:strokeWidth="5dp"
         app:strokeColor="@color/black"
+
         >
 
         <LinearLayout
@@ -31,7 +32,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="2.5"
                 android:orientation="vertical">
 
                 <TextView
@@ -89,24 +90,26 @@
 
             <ImageView
                 android:id="@+id/yokai_image"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_margin="20dp"
                 app:srcCompat="@drawable/ic_launcher_foreground" />
-
-            <ImageView
-                android:id="@+id/fav_button"
-                android:layout_width="160dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/usable_icon_favorite_heart" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
+    <ImageView
+        android:id="@+id/fav_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:elevation="8dp"
+        app:srcCompat="@drawable/usable_icon_favorite_heart"
+        app:layout_constraintTop_toTopOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="@id/card_view"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
