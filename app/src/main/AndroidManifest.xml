@@ -13,6 +13,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".RangosScreen"
             android:exported="false" />
         <activity
@@ -26,12 +27,31 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+=======
+            android:name=".Ejemplo"
+>>>>>>> 1dffd7bd908e17786743542a64c9943257dd93ed
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false">
+
         </activity>
         <activity
             android:name=".MainActivity"

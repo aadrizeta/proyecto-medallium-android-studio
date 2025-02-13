@@ -25,7 +25,7 @@
         android:layout_width="354dp"
         android:layout_height="650dp"
         android:orientation="vertical"
-        android:background="@drawable/rounded_container"
+        android:background="@drawable/custom_layout_rounded_container"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_text_input_layout"
+                    android:background="@drawable/custom_layout_rounded_text_input_layout"
                     app:boxStrokeWidth="0dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_text_input_layout"
+                    android:background="@drawable/custom_layout_rounded_text_input_layout"
                     app:boxStrokeWidth="0dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -125,7 +125,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded_text_input_layout"
+            android:background="@drawable/custom_layout_rounded_text_input_layout"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             app:boxStrokeWidth="0dp"
@@ -149,7 +149,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded_text_input_layout"
+            android:background="@drawable/custom_layout_rounded_text_input_layout"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             app:boxStrokeWidth="0dp"
@@ -173,12 +173,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded_text_input_layout"
+            android:background="@drawable/custom_layout_rounded_text_input_layout"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             app:boxStrokeWidth="0dp"
             app:passwordToggleEnabled="true"
-            app:passwordToggleDrawable="@drawable/outline_visibility_24"
+            app:passwordToggleDrawable="@drawable/usable_icon_outline_visibility_24"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -201,12 +201,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded_text_input_layout"
+            android:background="@drawable/custom_layout_rounded_text_input_layout"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             app:boxStrokeWidth="0dp"
             app:passwordToggleEnabled="true"
-            app:passwordToggleDrawable="@drawable/outline_visibility_24"
+            app:passwordToggleDrawable="@drawable/usable_icon_outline_visibility_24"
             >
 
             <com.google.android.material.textfield.TextInputEditText
