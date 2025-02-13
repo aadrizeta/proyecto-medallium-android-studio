@@ -11,13 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class RangosScreen extends AppCompatActivity {
+public class ElementosScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_rangos_screen);
+        setContentView(R.layout.activity_elementos_screen);
 
         ImageView atrasButton = (ImageView) findViewById(R.id.backButton);
 
