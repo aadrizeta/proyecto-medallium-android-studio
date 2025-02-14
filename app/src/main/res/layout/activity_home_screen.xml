@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="110dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -155,7 +154,7 @@
                     android:backgroundTint="@color/botonRango"
                     android:elevation="20dp"
                     android:fontFamily="@font/montserrat"
-                    android:text="Rango"
+                    android:text="Rangos"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     />
@@ -212,13 +211,13 @@
                 >
 
                     <Button
-                        android:id="@+id/fases_button"
+                        android:id="@+id/saga_button"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:backgroundTint="@color/botonFase"
                         android:elevation="20dp"
                         android:fontFamily="@font/montserrat"
-                        android:text="Fases"
+                        android:text="Saga"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                     />
@@ -231,20 +230,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/populares_textContainer"
-        android:layout_width="404dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutbotones">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutbotones"
+        android:paddingHorizontal="145dp"
+        >
 
             <TextView
                 android:id="@+id/textView_populares"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppins"
-                android:text="Populares"
                 android:textAlignment="center"
+                android:text="Populares"
                 android:textColor="#020202"
                 android:textSize="24dp"
                 android:textStyle="bold"
