@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tribus_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/main_background"
+        android:elevation="20dp"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/black"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.2"
+                android:layout_gravity="center"
+                android:paddingHorizontal="70dp"
+                >
+
+            <ImageView
+                android:id="@+id/tribu_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:layout_gravity="center"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nombre_yokai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Nombre tribu"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nombre_japones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:text="La Tribu Maléfica es una tribu introducida en Yo-kai Watch 2. Los Yo-kai maléficos se caracterizan por no recibir bonus de unidad al juntarse 2 o más Yo-kai maléficos, cosa que si reciben las otras tribus, por tener una gran resistencia a las espiritaciones (Al punto de rivalizar con los Yo-kai escurridizos, solo que los maléficos son resistentes por naturaleza y por separado, mientras que los escurridizos necesitan juntarse 2 o más), por tener unas estadísticas particularmente altas, y por no poder llevar equipado ningún objeto (salvo Malisnia). Las espiritaciones de los Yo-kai maléficos siempre son negativas, aunque sus animáximum pueden causar espiritaciones positivas. Hay Yo-kai maléficos atacantes físicos, atacantes elementales y curativos."
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:orientation="vertical"
+            android:paddingHorizontal="50dp"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Yo-kais de esta tribu"
+                android:textAlignment="center"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:backgroundTint="#C5CACD"
+                android:fontFamily="@font/poppins"
+                >
+
+            </Button>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:elevation="8dp"
+        app:srcCompat="@drawable/baseline_close_24"
+        app:layout_constraintTop_toTopOf="@id/tribus_descripcion"
+        app:layout_constraintEnd_toEndOf="@id/tribus_descripcion"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
