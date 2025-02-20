@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
     >
 
     <com.google.android.material.card.MaterialCardView
@@ -15,10 +14,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="25dp"
         android:backgroundTint="@color/main_background"
         android:elevation="20dp"
-        app:strokeWidth="5dp"
+        app:strokeWidth="10dp"
         app:strokeColor="@color/black"
         >
 
@@ -70,7 +69,7 @@
                     android:id="@+id/nombre_japones"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="15dp"
+                    android:paddingHorizontal="20dp"
                     android:text="La Tribu Maléfica es una tribu introducida en Yo-kai Watch 2. Los Yo-kai maléficos se caracterizan por no recibir bonus de unidad al juntarse 2 o más Yo-kai maléficos, cosa que si reciben las otras tribus, por tener una gran resistencia a las espiritaciones (Al punto de rivalizar con los Yo-kai escurridizos, solo que los maléficos son resistentes por naturaleza y por separado, mientras que los escurridizos necesitan juntarse 2 o más), por tener unas estadísticas particularmente altas, y por no poder llevar equipado ningún objeto (salvo Malisnia). Las espiritaciones de los Yo-kai maléficos siempre son negativas, aunque sus animáximum pueden causar espiritaciones positivas. Hay Yo-kai maléficos atacantes físicos, atacantes elementales y curativos."
                     android:textColor="#000000"
                     android:textSize="17sp"
