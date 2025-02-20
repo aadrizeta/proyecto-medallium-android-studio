@@ -8,9 +8,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class Ejemplo extends AppCompatActivity {
 
@@ -21,9 +23,12 @@ public class Ejemplo extends AppCompatActivity {
         setContentView(R.layout.activity_ejemplo);
 
         LinearLayout mainContainer = findViewById(R.id.mainContainer);
-
         LayoutInflater inflater = LayoutInflater.from(this);
+
         View cardView = inflater.inflate(R.layout.yokai_cardview, mainContainer, false);
+        View cardView2 = inflater.inflate(R.layout.tribu_descripcion_cardview, mainContainer, false);
+
+        ImageView cerrar = cardView2.findViewById(R.id.close);
 
         MaterialCardView yokaiCardView = cardView.findViewById(R.id.card_view);
         yokaiCardView.setStrokeColor(getResources().getColor(R.color.tribu_color_guapo));
@@ -44,21 +49,29 @@ public class Ejemplo extends AppCompatActivity {
         ImageView favButton = cardView.findViewById(R.id.fav_button);
         favButton.setTag("black");
 
-        favButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleFavButton(favButton);
-            }
-        });
+        favButton.setOnClickListener(v -> toggleFavButton(favButton));
 
         tribeIcon.setImageResource(R.drawable.tribe_icon_small_guapo);
         elementIcon.setImageResource(R.drawable.image22);
         rankButton.setImageResource(R.drawable.image23);
 
         mainContainer.addView(cardView);
+
+        // Al hacer clic en la card, se abre el modal
+        cardView.setOnClickListener(v -> {
+            // Construcción del diálogo
+            AlertDialog alertDialog = new MaterialAlertDialogBuilder(Ejemplo.this)
+                    .setView(cardView2)
+                    .create();
+            alertDialog.show();
+
+            // Cierra el diálogo al hacer clic en el botón cerrar
+            cerrar.setOnClickListener(v1 -> alertDialog.dismiss());
+        });
     }
-    public void toggleFavButton(ImageView favButton){
-        if (favButton.getTag().equals("black")){
+
+    public void toggleFavButton(ImageView favButton) {
+        if (favButton.getTag().equals("black")) {
             favButton.setImageResource(R.drawable.usable_icon_red_fav_icon);
             favButton.setTag("red");
         } else {

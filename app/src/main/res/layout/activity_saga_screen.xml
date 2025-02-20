@@ -18,7 +18,7 @@
         >
 
         <TextView
-            android:id="@+id/rangosTitle"
+            android:id="@+id/sagaTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Saga"
@@ -42,6 +42,69 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/baseline_arrow_back_24"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Saga1"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="141dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_marginVertical="40dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toTopOf="@id/Saga2"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/saga_logo1"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Saga2"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="141dp"
+        app:layout_constraintTop_toBottomOf="@id/Saga1"
+        android:layout_marginVertical="40dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toTopOf="@id/Saga3"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/saga_logo2"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Saga3"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="141dp"
+        app:layout_constraintTop_toBottomOf="@id/Saga2"
+        android:layout_marginVertical="40dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/saga_logo3"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
