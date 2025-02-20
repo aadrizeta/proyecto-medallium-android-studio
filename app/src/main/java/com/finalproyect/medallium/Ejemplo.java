@@ -26,9 +26,6 @@ public class Ejemplo extends AppCompatActivity {
         LayoutInflater inflater = LayoutInflater.from(this);
 
         View cardView = inflater.inflate(R.layout.yokai_cardview, mainContainer, false);
-        View cardView2 = inflater.inflate(R.layout.tribu_descripcion_cardview, mainContainer, false);
-
-        ImageView cerrar = cardView2.findViewById(R.id.close);
 
         MaterialCardView yokaiCardView = cardView.findViewById(R.id.card_view);
         yokaiCardView.setStrokeColor(getResources().getColor(R.color.tribu_color_guapo));
@@ -57,8 +54,12 @@ public class Ejemplo extends AppCompatActivity {
 
         mainContainer.addView(cardView);
 
-        // Al hacer clic en la card, se abre el modal
         cardView.setOnClickListener(v -> {
+            // Inflar cardView2 dentro del listener
+            View cardView2 = inflater.inflate(R.layout.tribu_descripcion_cardview, null, false);
+            ImageView cerrar = cardView2.findViewById(R.id.close);
+            TextView descripcion = cardView2.findViewById(R.id.nombre_japones);
+
             // Construcción del diálogo
             AlertDialog alertDialog = new MaterialAlertDialogBuilder(Ejemplo.this)
                     .setView(cardView2)

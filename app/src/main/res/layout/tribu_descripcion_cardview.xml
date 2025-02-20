@@ -74,6 +74,7 @@
                     android:textColor="#000000"
                     android:textSize="17sp"
                     android:layout_marginTop="15dp"
+                    android:scrollbars="vertical"
                     android:textStyle="normal"
                     android:fontFamily="@font/montserrat"
                     />
@@ -85,7 +86,7 @@
             android:layout_height="match_parent"
             android:layout_weight="5.5"
             android:orientation="vertical"
-            android:paddingHorizontal="50dp"
+            android:paddingHorizontal="20dp"
             >
 
             <Button
