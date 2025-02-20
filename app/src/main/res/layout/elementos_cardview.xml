@@ -11,7 +11,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,21 +21,12 @@
         android:elevation="20dp"
         app:strokeWidth="5dp"
         app:strokeColor="@color/black"
-
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/saga_logo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,31 +35,42 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/nombre_saga"
+                    android:id="@+id/elemento_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="30dp"
                     android:layout_marginTop="30dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="Nombre Saga"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Elemento"
                     android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/descripcion_saga"
+                    android:id="@+id/elemento_descripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="30dp"
-                    android:text="Descripción Saga"
+                    android:text="Descripcion"
                     android:textColor="#000000"
                     android:textSize="17sp"
                     android:layout_marginTop="15dp"
-                    android:textStyle="normal"
                     android:fontFamily="@font/montserrat"
                     />
 
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/elemento_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:layout_marginBottom="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                />
 
         </LinearLayout>
 
