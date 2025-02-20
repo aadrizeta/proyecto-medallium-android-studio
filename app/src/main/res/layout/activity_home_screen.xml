@@ -72,7 +72,6 @@
             android:id="@+id/inputBusqueda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:endIconDrawable="@drawable/filter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:startIconDrawable="@drawable/baseline_search_24"
