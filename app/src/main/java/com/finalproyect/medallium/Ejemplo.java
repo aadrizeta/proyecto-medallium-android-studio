@@ -1,6 +1,7 @@
 package com.finalproyect.medallium;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -58,7 +59,8 @@ public class Ejemplo extends AppCompatActivity {
             // Inflar cardView2 dentro del listener
             View cardView2 = inflater.inflate(R.layout.tribu_descripcion_cardview, null, false);
             ImageView cerrar = cardView2.findViewById(R.id.close);
-            TextView descripcion = cardView2.findViewById(R.id.nombre_japones);
+            TextView descripcion = cardView2.findViewById(R.id.tribu_descripcion);
+            descripcion.setMovementMethod(new ScrollingMovementMethod());
 
             // Construcción del diálogo
             AlertDialog alertDialog = new MaterialAlertDialogBuilder(Ejemplo.this)

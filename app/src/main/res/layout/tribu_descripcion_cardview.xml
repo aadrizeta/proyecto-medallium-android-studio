@@ -14,10 +14,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="25dp"
+        app:cardCornerRadius="28dp"
         android:backgroundTint="@color/main_background"
         android:elevation="20dp"
-        app:strokeWidth="10dp"
+        app:strokeWidth="5dp"
         app:strokeColor="@color/black"
         >
 
