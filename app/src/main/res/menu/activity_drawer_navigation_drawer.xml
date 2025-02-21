@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/house_fill"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_favs"
+            android:icon="@drawable/icon_baseline_filled_heart_24"
+            android:title="@string/menu_favs" />
+        <item
+            android:id="@+id/nav_myk"
+            android:icon="@drawable/yokai_icon"
+            android:title="@string/menu_myk" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/icon_baseline_account_circle_24"
+            android:title="@string/menu_perfil"/>
+    </group>
+    <item android:title="" >
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/box_arrow_left"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+</menu>

@@ -14,7 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".DrawerNavigationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_drawer_navigation"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ElementosScreen"
             android:exported="false" />
@@ -38,20 +48,14 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".Ejemplo"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
