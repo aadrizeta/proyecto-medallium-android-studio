@@ -24,8 +24,7 @@ public class YokaiFragment extends Fragment {
         binding = FragmentFavoritosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        favoritosViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 

@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.finalproyect.medallium.ui.home.HomeFragment;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -44,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void launchHomeScreen() {
-        Intent intent = new Intent(this, HomeScreen.class);
+        Intent intent = new Intent(this, HomeFragment.class);
         startActivity(intent);
     }
 
