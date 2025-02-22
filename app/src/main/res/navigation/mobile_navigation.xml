@@ -27,4 +27,10 @@
         android:name="com.finalproyect.medallium.ui.profile.ProfileFragment"
         android:label="@string/menu_perfil"
         tools:layout="@layout/fragment_profile"/>
+    <activity
+        android:id="@+id/nav_logout"
+        android:name="com.finalproyect.medallium.LoginActivity"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_profile"
+        />
 </navigation>
