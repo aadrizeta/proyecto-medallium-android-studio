@@ -1,10 +1,9 @@
-package com.finalproyect.medallium.ui.profile;
+package com.finalproyect.medallium.ui.navMenu.profile;
 
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;

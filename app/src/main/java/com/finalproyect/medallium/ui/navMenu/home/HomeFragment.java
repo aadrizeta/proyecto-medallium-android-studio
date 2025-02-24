@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.home;
+package com.finalproyect.medallium.ui.navMenu.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,19 +6,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.finalproyect.medallium.ElementosScreen;
+import com.finalproyect.medallium.ui.views.ElementosScreen;
 import com.finalproyect.medallium.Profile;
 import com.finalproyect.medallium.R;
-import com.finalproyect.medallium.RangosScreen;
-import com.finalproyect.medallium.SagaScreen;
-import com.finalproyect.medallium.TribusScreen;
+import com.finalproyect.medallium.ui.views.RangosScreen;
+import com.finalproyect.medallium.ui.views.SagaScreen;
+import com.finalproyect.medallium.ui.views.TribusScreen;
 import com.finalproyect.medallium.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {

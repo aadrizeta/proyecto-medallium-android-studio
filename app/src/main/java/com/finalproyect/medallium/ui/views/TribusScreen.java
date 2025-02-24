@@ -1,4 +1,4 @@
-package com.finalproyect.medallium;
+package com.finalproyect.medallium.ui.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.finalproyect.medallium.HomeScreen;
+import com.finalproyect.medallium.R;
 
 public class TribusScreen extends AppCompatActivity {
 
@@ -24,12 +24,8 @@ public class TribusScreen extends AppCompatActivity {
         atrasButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchHome();
+                TribusScreen.this.finish();
             }
         });
-    }
-    public void launchHome() {
-        Intent intent = new Intent(this, HomeScreen.class);
-        startActivity(intent);
     }
 }

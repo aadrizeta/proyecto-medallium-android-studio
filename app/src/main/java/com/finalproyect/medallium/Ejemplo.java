@@ -1,5 +1,6 @@
 package com.finalproyect.medallium;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -81,5 +82,8 @@ public class Ejemplo extends AppCompatActivity {
             favButton.setImageResource(R.drawable.usable_icon_favorite_heart);
             favButton.setTag("black");
         }
+    }
+    public static void regresar(Activity activity){
+        activity.finish();
     }
 }

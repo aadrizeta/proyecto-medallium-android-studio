@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.profile;
+package com.finalproyect.medallium.ui.navMenu.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

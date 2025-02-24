@@ -1,4 +1,4 @@
-package com.finalproyect.medallium;
+package com.finalproyect.medallium.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +8,10 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.finalproyect.medallium.ui.home.HomeFragment;
+import com.finalproyect.medallium.R;
+import com.finalproyect.medallium.ui.MainHomeScreen;
+import com.finalproyect.medallium.ui.navMenu.home.HomeFragment;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -46,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void launchHomeScreen() {
-        Intent intent = new Intent(this, HomeFragment.class);
+        Intent intent = new Intent(this, MainHomeScreen.class);
         startActivity(intent);
     }
 

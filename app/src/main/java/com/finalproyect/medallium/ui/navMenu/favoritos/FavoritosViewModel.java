@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.favoritos;
+package com.finalproyect.medallium.ui.navMenu.favoritos;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

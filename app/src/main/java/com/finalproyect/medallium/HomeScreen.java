@@ -8,10 +8,11 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
+
+import com.finalproyect.medallium.ui.views.ElementosScreen;
+import com.finalproyect.medallium.ui.views.RangosScreen;
+import com.finalproyect.medallium.ui.views.SagaScreen;
+import com.finalproyect.medallium.ui.views.TribusScreen;
 
 public class HomeScreen extends AppCompatActivity {
 

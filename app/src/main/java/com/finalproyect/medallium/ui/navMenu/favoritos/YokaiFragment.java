@@ -1,28 +1,28 @@
-package com.finalproyect.medallium.ui.obtenidos;
+package com.finalproyect.medallium.ui.navMenu.favoritos;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.finalproyect.medallium.databinding.FragmentMisyokaiBinding;
+import com.finalproyect.medallium.databinding.FragmentFavoritosBinding;
 
-public class MisyokaiFragment extends Fragment {
+public class YokaiFragment extends Fragment {
 
-    private FragmentMisyokaiBinding binding;
+    private FragmentFavoritosBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        MisyokaiViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(MisyokaiViewModel.class);
+        FavoritosViewModel favoritosViewModel =
+                new ViewModelProvider(this).get(FavoritosViewModel.class);
 
-        binding = FragmentMisyokaiBinding.inflate(inflater, container, false);
+        binding = FragmentFavoritosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
 
         return root;
     }

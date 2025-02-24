@@ -15,27 +15,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".DrawerNavigationActivity"
-            android:exported="true"
+            android:name=".ui.MainHomeScreen"
+            android:exported="false"
             android:label="@string/title_activity_drawer_navigation"
-            android:theme="@style/Theme.MyApplication.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.MyApplication.NoActionBar"/>
         <activity
-            android:name=".ElementosScreen"
+            android:name=".ui.views.ElementosScreen"
             android:exported="false" />
         <activity
-            android:name=".SagaScreen"
+            android:name=".ui.views.SagaScreen"
             android:exported="false" />
         <activity
-            android:name=".TribusScreen"
+            android:name=".ui.views.TribusScreen"
             android:exported="false" />
         <activity
-            android:name=".RangosScreen"
+            android:name=".ui.views.RangosScreen"
             android:exported="false" />
         <activity
             android:name=".HomeScreen"
@@ -44,14 +38,20 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.auth.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="false"/>
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" >
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Ejemplo"
