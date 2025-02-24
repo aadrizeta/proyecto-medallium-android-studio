@@ -1,4 +1,4 @@
-package com.finalproyect.medallium;
+package com.finalproyect.medallium.domain.entities;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,7 +1,9 @@
-package com.finalproyect.medallium.ui;
+package com.finalproyect.medallium.ui.views;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.finalproyect.medallium.R;
 import com.google.android.material.navigation.NavigationView;
@@ -27,10 +29,20 @@ public class MainHomeScreen extends AppCompatActivity {
         binding = ActivityDrawerNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBarDrawerNavigation.toolbar);
-
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+        ImageView navBar = findViewById(R.id.navBar);
+
+        navBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawer.isDrawerOpen(navigationView)) {
+                    drawer.closeDrawer(navigationView);
+                } else {
+                    drawer.openDrawer(navigationView);
+                }
+            }
+        });
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -38,7 +50,7 @@ public class MainHomeScreen extends AppCompatActivity {
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_drawer_navigation);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        //NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 

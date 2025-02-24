@@ -1,6 +1,5 @@
 package com.finalproyect.medallium.ui.views;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -8,7 +7,6 @@ import android.widget.ImageView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.finalproyect.medallium.HomeScreen;
 import com.finalproyect.medallium.R;
 
 public class RangosScreen extends AppCompatActivity {

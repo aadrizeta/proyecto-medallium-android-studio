@@ -10,8 +10,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.finalproyect.medallium.R;
-import com.finalproyect.medallium.ui.MainHomeScreen;
-import com.finalproyect.medallium.ui.navMenu.home.HomeFragment;
+import com.finalproyect.medallium.ui.views.MainHomeScreen;
 
 public class LoginActivity extends AppCompatActivity {
 

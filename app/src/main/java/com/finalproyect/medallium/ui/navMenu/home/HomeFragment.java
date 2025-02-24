@@ -8,12 +8,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.finalproyect.medallium.ui.views.ElementosScreen;
-import com.finalproyect.medallium.Profile;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.ui.views.RangosScreen;
 import com.finalproyect.medallium.ui.views.SagaScreen;
@@ -32,7 +30,6 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        CardView cardViewLogo = root.findViewById(R.id.cardViewLogo);
         Button tribusButton = root.findViewById(R.id.tribus_button);
         Button elementosButton = root.findViewById(R.id.elementos_button);
         Button rangosButton = root.findViewById(R.id.rangos_button);
@@ -50,11 +47,6 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-    }
-
-    public void launchProfile() {
-        Intent intent = new Intent(getActivity(), Profile.class);
-        startActivity(intent);
     }
 
     public void launchRangos() {
