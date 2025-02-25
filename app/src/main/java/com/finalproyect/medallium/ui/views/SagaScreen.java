@@ -55,7 +55,7 @@ public class SagaScreen extends AppCompatActivity {
         });
     }
     public void mostrarInformacion(ImageView juego){
-        LinearLayout mainContainer = (LinearLayout) findViewById(R.id.mainContainer);
+        LinearLayout mainContainer = findViewById(R.id.mainContainer);
         LayoutInflater inflater = LayoutInflater.from(this);
         View juegoView = inflater.inflate(R.layout.saga_cardview, mainContainer, false);
         ImageView logoJuego = juegoView.findViewById(R.id.logo_juego);
