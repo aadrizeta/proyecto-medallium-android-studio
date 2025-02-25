@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         registerButton = findViewById(R.id.login_button);
 
-        retrofit = RetrofitClient.getClient("http://192.168.73.113:8080");
+        retrofit = RetrofitClient.getClient("http://192.168.22.62:8080");
         apiService = retrofit.create(ApiService.class);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
