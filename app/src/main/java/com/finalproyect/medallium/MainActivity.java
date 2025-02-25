@@ -1,11 +1,10 @@
-package com.finalproyect.medallium.ui.views;
+package com.finalproyect.medallium;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.finalproyect.medallium.R;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -17,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.finalproyect.medallium.databinding.ActivityDrawerNavigationBinding;
 
-public class MainHomeScreen extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityDrawerNavigationBinding binding;

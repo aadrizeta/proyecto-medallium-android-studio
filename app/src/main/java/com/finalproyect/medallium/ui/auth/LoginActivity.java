@@ -10,7 +10,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.finalproyect.medallium.R;
-import com.finalproyect.medallium.ui.views.MainHomeScreen;
+import com.finalproyect.medallium.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void launchHomeScreen() {
-        Intent intent = new Intent(this, MainHomeScreen.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
