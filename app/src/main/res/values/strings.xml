@@ -31,4 +31,8 @@
     <string name="menu_logout">Cerrar Sesión</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="YKW1_name">Yo-Kai Watch</string>
+    <string name="YKW1_fecha">Lanzamiento: 2013 (Japón) | 2015 (Occidente)</string>
+    <string name="YKW1_plataformas">Plataformas: Nintendo 3DS, Nintendo Switch (Remaster en Japón)</string>
+    <string name="YKW1_description">El primer juego de la serie introduce el mundo de los Yo-kai, criaturas invisibles que afectan la vida diaria de los humanos. El protagonista (Nathan o Katie) obtiene un Yo-kai Watch, un reloj especial que permite ver y hacerse amigo de los Yo-kai. A lo largo del juego, explora Floresia (Springdale), resuelve problemas causados por los Yo-kai y enfrenta a enemigos poderosos, incluyendo al malvado Yo-kai Damead.</string>
 </resources>
