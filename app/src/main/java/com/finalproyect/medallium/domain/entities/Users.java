@@ -32,8 +32,9 @@ public class Users {
             this.lastName = lastName;
             this.password = password;
             this.image = image;
-            this.id_user = id_user;
+            //this.id_user = id_user;
         }
+
 
         public String getName() {
             return name;
@@ -81,6 +82,9 @@ public class Users {
 
         public void setId_user(Long id_user) {
             this.id_user = id_user;
+        }
+
+        public void setUsername(String username) {
         }
     }
 
