@@ -28,19 +28,22 @@ public class SagaScreen extends AppCompatActivity {
         ImageView yokaiwatch2 = (ImageView) findViewById(R.id.yokaiwatch2);
         ImageView yokaiwatch3 = (ImageView) findViewById(R.id.yokaiwatch3);
 
-        LinearLayout mainContainer = (LinearLayout) findViewById(R.id.mainContainer);
-        LayoutInflater inflater = LayoutInflater.from(this);
-
         yokaiwatch1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View juegoView = inflater.inflate(R.layout.saga_cardview, mainContainer, false);
-                TextView descripcion = juegoView.findViewById(R.id.descripcion);
-                descripcion.setMovementMethod(new ScrollingMovementMethod());
-                AlertDialog alertDialog = new MaterialAlertDialogBuilder(SagaScreen.this)
-                        .setView(juegoView)
-                        .create();
-                alertDialog.show();
+                mostrarInformacion(yokaiwatch1);
+            }
+        });
+        yokaiwatch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarInformacion(yokaiwatch2);
+            }
+        });
+        yokaiwatch3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarInformacion(yokaiwatch3);
             }
         });
 
@@ -50,5 +53,42 @@ public class SagaScreen extends AppCompatActivity {
                 SagaScreen.this.finish();
             }
         });
+    }
+    public void mostrarInformacion(ImageView juego){
+        LinearLayout mainContainer = (LinearLayout) findViewById(R.id.mainContainer);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View juegoView = inflater.inflate(R.layout.saga_cardview, mainContainer, false);
+        ImageView logoJuego = juegoView.findViewById(R.id.logo_juego);
+        TextView nombreJuego = juegoView.findViewById(R.id.nombre_juego);
+        TextView fechaLanzamiento = juegoView.findViewById(R.id.fecha_lanzamiento);
+        TextView plataformas = juegoView.findViewById(R.id.plataformas);
+        TextView descripcion = juegoView.findViewById(R.id.descripcion);
+        descripcion.setMovementMethod(new ScrollingMovementMethod());
+
+        if (juego.getId() == R.id.yokaiwatch1) {
+            logoJuego.setImageResource(R.drawable.saga_logo1);
+            nombreJuego.setText(R.string.YKW1_name);
+            fechaLanzamiento.setText(R.string.YKW1_fecha);
+            plataformas.setText(R.string.YKW1_plataformas);
+            descripcion.setText(R.string.YKW1_description);
+        }
+        else if (juego.getId() == R.id.yokaiwatch2) {
+            logoJuego.setImageResource(R.drawable.saga_logo2);
+            nombreJuego.setText(R.string.YKW2_name);
+            fechaLanzamiento.setText(R.string.YKW2_fecha);
+            plataformas.setText(R.string.YKW2_plataformas);
+            descripcion.setText(R.string.YKW2_description);
+        }
+        else if (juego.getId() == R.id.yokaiwatch3) {
+            logoJuego.setImageResource(R.drawable.saga_logo3);
+            nombreJuego.setText(R.string.YKW3_name);
+            fechaLanzamiento.setText(R.string.YKW3_fecha);
+            plataformas.setText(R.string.YKW3_plataformas);
+            descripcion.setText(R.string.YKW3_description);
+        }
+        AlertDialog alertDialog = new MaterialAlertDialogBuilder(SagaScreen.this)
+                .setView(juegoView)
+                .create();
+        alertDialog.show();
     }
 }

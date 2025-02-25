@@ -35,4 +35,12 @@
     <string name="YKW1_fecha">Lanzamiento: 2013 (Japón) | 2015 (Occidente)</string>
     <string name="YKW1_plataformas">Plataformas: Nintendo 3DS, Nintendo Switch (Remaster en Japón)</string>
     <string name="YKW1_description">El primer juego de la serie introduce el mundo de los Yo-kai, criaturas invisibles que afectan la vida diaria de los humanos. El protagonista (Nathan o Katie) obtiene un Yo-kai Watch, un reloj especial que permite ver y hacerse amigo de los Yo-kai. A lo largo del juego, explora Floresia (Springdale), resuelve problemas causados por los Yo-kai y enfrenta a enemigos poderosos, incluyendo al malvado Yo-kai Damead.</string>
+    <string name="YKW2_name">Yo-Kai Watch 2</string>
+    <string name="YKW2_fecha">Lanzamiento: 2014 (Japón) | 2016-2017 (Occidente) </string>
+    <string name="YKW2_plataformas">Plataformas: Nintendo 3DS </string>
+    <string name="YKW2_description">Expande la historia del primer juego con nuevas mecánicas, como la posibilidad de viajar al pasado y conocer el origen del Yo-kai Watch. Se enfrentan dos facciones de Yo-kai: Fantasqueletos y Carnánimas, lo que influye en la historia y en qué Yo-kai se pueden conseguir. Se introducen nuevos Yo-kai, monturas en tren y el modo multijugador.</string>
+    <string name="YKW3_name">Yo-Kai Watch 3</string>
+    <string name="YKW3_fecha">Lanzamiento: 2016 (Japón) | 2018-2019 (Occidente) </string>
+    <string name="YKW3_plataformas">Plataformas: Nintendo 3DS </string>
+    <string name="YKW3_description">El protagonista y su familia se mudan a San Peanutsburg (St. Peanutsburg), una ciudad inspirada en EE.UU., con un nuevo elenco de Yo-kai. Además, se introduce un segundo protagonista, Mac (Hailey Anne), que investiga casos paranormales en Floresia. </string>
 </resources>
