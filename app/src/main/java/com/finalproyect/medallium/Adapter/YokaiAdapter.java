@@ -33,33 +33,27 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
 
     @Override
     public void onBindViewHolder(YokaiViewHolder holder, int position) {
-        // Obtener el Yokai actual de la lista
         DetallesYokai yokai = yokaiList.get(position);
 
-        // Asignar los valores a los TextViews y otros componentes de la vista
-        holder.nombreYokai.setText(yokai.getYokai().getName());  // Accediendo al nombre de Yokai
+        holder.nombreYokai.setText(yokai.getYokai().getName());
         holder.nombreJapones.setText(yokai.getNombreJapo());
 
-        // Cargar la imagen del Yokai
         Glide.with(holder.itemView.getContext())
-                .load(yokai.getImage())  // Usando el campo 'image' de DetallesYokai
+                .load(yokai.getImage())
                 .into(holder.yokaiImage);
 
-        // Cargar el icono de la tribu (deberías agregar la lógica para obtener este icono)
         if (yokai.getYokai().getTribu() != null) {
             Glide.with(holder.itemView.getContext())
                     .load(yokai.getYokai().getTribu().getImagenPixel())
                     .into(holder.tribeIcon);
         }
 
-        // Cargar el icono de elemento (deberías agregar la lógica para obtener este icono)
         if (yokai.getYokai().getElemento() != null) {
             Glide.with(holder.itemView.getContext())
                     .load(yokai.getYokai().getElemento().getImage())
                     .into(holder.elementIcon);
         }
 
-        // Cargar el ícono de rango (deberías agregar la lógica para obtener este ícono)
         if (yokai.getYokai().getRango() != null) {
             Glide.with(holder.itemView.getContext())
                     .load(yokai.getYokai().getRango().getImage())
@@ -72,7 +66,6 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
         return yokaiList != null ? yokaiList.size() : 0;
     }
 
-    // ViewHolder para los elementos del RecyclerView
     public static class YokaiViewHolder extends RecyclerView.ViewHolder {
         TextView nombreYokai;
         TextView nombreJapones;
@@ -92,7 +85,6 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
         }
     }
 
-    // Establece la lista de Yokais para el adaptador
     public void setYokais(List<DetallesYokai> yokais) {
         this.yokaiList = yokais;
         notifyDataSetChanged();

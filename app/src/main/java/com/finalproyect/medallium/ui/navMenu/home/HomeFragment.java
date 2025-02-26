@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private List<DetallesYokai> yokaiList = new ArrayList<>();
     private YokaiAdapter yokaiAdapter;
-    private static final String BASE_URL = "http://192.168.1.163:8080/";
+    private static final String BASE_URL = "http://192.168.22.8:8080/";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
