@@ -26,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText lastNameEditText;
     private EditText emailEditText;
     private EditText passwordEditText;
+    private EditText confirmPasswordEditText;
     private Button registerButton;
     private Retrofit retrofit;
     private ApiService apiService;
@@ -39,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         lastNameEditText = findViewById(R.id.lastName);
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
+        confirmPasswordEditText = findViewById(R.id.confirm_password);
         registerButton = findViewById(R.id.login_button);
 
         retrofit = RetrofitClient.getClient("http://192.168.73.113:8080");
@@ -57,6 +59,18 @@ public class RegisterActivity extends AppCompatActivity {
         String lastName = lastNameEditText.getText().toString();
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
+        String confirmPassword = confirmPasswordEditText.getText().toString();
+
+        if (!password.equals(confirmPassword)) {
+            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Verificar longitud mínima de la contraseña
+        // if (password.length() < 8) {
+        //     Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres", Toast.LENGTH_SHORT).show();
+        //     return;
+        // }
 
         Users.User newUser = new Users.User(firstName, email, lastName, password, null, null);
 
