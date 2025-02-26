@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.tabbedViews;
+package com.finalproyect.medallium.ui.tabbedViews.fragments;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.finalproyect.medallium.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DescripcionYokai#newInstance} factory method to
+ * Use the {@link EstadisticasYokai#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DescripcionYokai extends Fragment {
+public class EstadisticasYokai extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class DescripcionYokai extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DescripcionYokai() {
+    public EstadisticasYokai() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class DescripcionYokai extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment descripcionYokai.
+     * @return A new instance of fragment EstadisticasYokai.
      */
     // TODO: Rename and change types and number of parameters
-    public static DescripcionYokai newInstance(String param1, String param2) {
-        DescripcionYokai fragment = new DescripcionYokai();
+    public static EstadisticasYokai newInstance(String param1, String param2) {
+        EstadisticasYokai fragment = new EstadisticasYokai();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class DescripcionYokai extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_descripcion_yokai, container, false);
+        return inflater.inflate(R.layout.fragment_estadisticas_yokai, container, false);
     }
 }
