@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button registerButton;
     private Retrofit retrofit;
     private ApiService apiService;
+    private TextView loginClickable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,14 +44,21 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         confirmPasswordEditText = findViewById(R.id.confirm_password);
         registerButton = findViewById(R.id.login_button);
+        loginClickable = findViewById(R.id.login_clickable);
 
-        retrofit = RetrofitClient.getClient("http://192.168.22.62:8080");
+        retrofit = RetrofitClient.getClient("http://192.168.1.65:8080");
         apiService = retrofit.create(ApiService.class);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 registerUser();
+            }
+        });
+        loginClickable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchLogin();
             }
         });
     }

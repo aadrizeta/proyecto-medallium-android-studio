@@ -14,12 +14,14 @@ import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.ui.views.VistaYokai;
+import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
 
 public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHolder> {
 
     private List<DetallesYokai> yokaiList;
+    private View yokaiView;
 
     // Constructor que recibe la lista de Yokais
     public YokaiAdapter(List<DetallesYokai> yokaiList) {
@@ -29,9 +31,9 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
     @Override
     public YokaiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // Inflar el layout para cada item
-        View itemView = LayoutInflater.from(parent.getContext())
+        yokaiView= LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.yokai_cardview, parent, false);
-        return new YokaiViewHolder(itemView);
+        return new YokaiViewHolder(yokaiView);
     }
 
     @Override
@@ -49,6 +51,38 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
             Glide.with(holder.itemView.getContext())
                     .load(yokai.getYokai().getTribu().getImagenPixel())
                     .into(holder.tribeIcon);
+            int idTribu = yokai.getYokai().getTribu().getId_Tribu();
+            switch (idTribu){
+                case 2:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_guapo));
+                    break;
+                case 3:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_valiente));
+                    break;
+                case 4:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_misterioso));
+                    break;
+                case 5:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_robusto));
+                    break;
+                case 6:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_oscuro));
+                    break;
+                case 7:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_siniestro));
+                    break;
+                case 8:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_amable));
+                    break;
+                case 9:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_maléfico));
+                    break;
+                case 10:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_escurridiza));
+                    break;
+                default:
+                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.black));
+            }
         }
 
         if (yokai.getYokai().getElemento() != null) {
@@ -85,6 +119,9 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
         ImageView tribeIcon;
         ImageView elementIcon;
         ImageView rankButton;
+        MaterialCardView yokaiCardView = itemView.findViewById(R.id.card_view);
+        ImageView favButton = yokaiCardView.findViewById(R.id.fav_button);
+
 
         public YokaiViewHolder(View itemView) {
             super(itemView);
@@ -94,6 +131,19 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
             tribeIcon = itemView.findViewById(R.id.tribe_icon);
             elementIcon = itemView.findViewById(R.id.element_icon);
             rankButton = itemView.findViewById(R.id.rank_button);
+            favButton = itemView.findViewById(R.id.fav_button);
+            favButton.setTag("black");
+            favButton.setOnClickListener(v -> toggleFavButton(favButton));
+        }
+        //metodo toggleFavButton
+        public void toggleFavButton(ImageView favButton) {
+            if (favButton.getTag().equals("black")) {
+                favButton.setImageResource(R.drawable.usable_icon_red_fav_icon);
+                favButton.setTag("red");
+            } else {
+                favButton.setImageResource(R.drawable.usable_icon_favorite_heart);
+                favButton.setTag("black");
+            }
         }
     }
 

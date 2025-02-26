@@ -187,7 +187,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingHorizontal="50dp"
+        android:paddingHorizontal="25dp"
         >
 
         <androidx.recyclerview.widget.RecyclerView
