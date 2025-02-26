@@ -1,5 +1,7 @@
 package com.finalproyect.medallium.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
+import com.finalproyect.medallium.ui.views.VistaYokai;
 
 import java.util.List;
 
@@ -59,6 +62,15 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
                     .load(yokai.getYokai().getRango().getImage())
                     .into(holder.rankButton);
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí podríamos lanzar un evento para seleccionar este yokai
+                // o abrir una nueva activity con detalles del yokai seleccionado
+                launchYokaiView(v.getContext(), yokai);
+
+            }
+        });
     }
 
     @Override
@@ -88,5 +100,9 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
     public void setYokais(List<DetallesYokai> yokais) {
         this.yokaiList = yokais;
         notifyDataSetChanged();
+    }
+    private void launchYokaiView(Context context, DetallesYokai yokai){
+        Intent intent = new Intent(context, VistaYokai.class);
+        context.startActivity(intent);
     }
 }
