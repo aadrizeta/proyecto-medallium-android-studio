@@ -72,15 +72,19 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
                     android:background="@drawable/custom_layout_rounded_text_input_layout"
-                    app:boxStrokeWidth="0dp">
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    android:layout_marginTop="5dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:id="@+id/firstName"
+                        android:importantForAutofill="no"
+                        android:autofillHints="none"
                         />
+
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
             <LinearLayout
@@ -108,7 +112,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:id="@+id/lastName"
 
                         />
@@ -135,7 +139,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
@@ -158,7 +162,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:id="@+id/email"
 
                 />
@@ -177,20 +181,18 @@
             android:layout_height="50dp"
             android:background="@drawable/custom_layout_rounded_text_input_layout"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             app:boxStrokeWidth="0dp"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleDrawable="@drawable/usable_icon_outline_visibility_24"
+            app:endIconMode="password_toggle"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:inputType="textPassword"
                 android:importantForAutofill="no"
                 android:autofillHints="none"
                 android:id="@+id/password"
-
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
@@ -207,18 +209,18 @@
             android:layout_height="50dp"
             android:background="@drawable/custom_layout_rounded_text_input_layout"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             app:boxStrokeWidth="0dp"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleDrawable="@drawable/usable_icon_outline_visibility_24"
+            app:endIconMode="password_toggle"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:inputType="textPassword"
                 android:importantForAutofill="no"
                 android:autofillHints="none"
+                android:id="@+id/confirm_password"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <Button
