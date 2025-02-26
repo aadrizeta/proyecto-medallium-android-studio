@@ -2,7 +2,9 @@ package com.finalproyect.medallium.domain.entities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DetallesYokai {
+import java.io.Serializable;
+
+public class DetallesYokai implements Serializable {
     private int id_detallesYokai;
     private String createdAt;
     private String updatedAt;

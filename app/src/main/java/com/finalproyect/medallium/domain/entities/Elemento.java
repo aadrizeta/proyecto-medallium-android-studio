@@ -2,7 +2,9 @@ package com.finalproyect.medallium.domain.entities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Elemento {
+import java.io.Serializable;
+
+public class Elemento implements Serializable {
     private int id_Elemento;
     private String fortaleza;
     private String debilidad;

@@ -153,6 +153,7 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
     }
     private void launchYokaiView(Context context, DetallesYokai yokai){
         Intent intent = new Intent(context, VistaYokai.class);
+        intent.putExtra("detallesYokai", yokai);
         context.startActivity(intent);
     }
 }

@@ -2,7 +2,9 @@ package com.finalproyect.medallium.domain.entities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Tribus {
+import java.io.Serializable;
+
+public class Tribus implements Serializable {
     private int id_Tribu;
     private String nombre;
     private String caracteristicasGenerales;

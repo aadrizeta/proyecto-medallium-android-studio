@@ -2,7 +2,9 @@ package com.finalproyect.medallium.domain.entities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Rango {
+import java.io.Serializable;
+
+public class Rango implements Serializable {
     private int id_Rango;
     private String name;
     private String descripcion;

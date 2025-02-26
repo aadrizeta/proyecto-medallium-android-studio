@@ -2,7 +2,9 @@ package com.finalproyect.medallium.domain.entities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Yokai {
+import java.io.Serializable;
+
+public class Yokai implements Serializable {
     private int id_Yokai;
     private String name;
     private Rango rango;
