@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.Adapter;
+package com.finalproyect.medallium.ui.navMenu.home.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
