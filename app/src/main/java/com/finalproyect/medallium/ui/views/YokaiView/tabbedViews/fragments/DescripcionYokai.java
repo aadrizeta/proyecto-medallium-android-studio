@@ -27,4 +27,7 @@ public class DescripcionYokai extends Fragment {
 
         return view;
     }
+    public void setDescripcion(String descripcion) {
+        descripcionYokai.setText(descripcion);
+    }
 }

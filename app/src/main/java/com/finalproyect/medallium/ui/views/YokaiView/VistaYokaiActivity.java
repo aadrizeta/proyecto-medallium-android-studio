@@ -17,12 +17,17 @@ import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.adapter.ViewPagerAdapter;
+import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.DescripcionYokai;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class VistaYokaiActivity extends AppCompatActivity {
 
     private ImageView yokaiCircle;
+    private ViewPagerAdapter adapter;
+    private ViewPager2 viewPager;
+    private DescripcionYokai descripcionYokai;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +36,7 @@ public class VistaYokaiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vista_yokai);
 
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
 
         TextView nombreYokai = findViewById(R.id.nombre_yokai);
         TextView nombreJapones = findViewById(R.id.nombre_yokai_japones);
@@ -86,7 +91,7 @@ public class VistaYokaiActivity extends AppCompatActivity {
         Glide.with(this).load(yokai.getYokai().getElemento().getImage()).into(imagenElemento);
         Glide.with(this).load(yokai.getYokai().getRango().getImage()).into(imagenRango);
 
-        ViewPagerAdapter adapter = new ViewPagerAdapter(this);
+        adapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
 
         new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
