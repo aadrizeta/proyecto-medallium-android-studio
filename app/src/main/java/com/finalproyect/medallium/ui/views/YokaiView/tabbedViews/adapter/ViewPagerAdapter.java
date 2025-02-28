@@ -1,13 +1,13 @@
-package com.finalproyect.medallium.ui.tabbedViews.adapter;
+package com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.finalproyect.medallium.ui.tabbedViews.fragments.DescripcionYokai;
-import com.finalproyect.medallium.ui.tabbedViews.fragments.EstadisticasYokai;
-import com.finalproyect.medallium.ui.tabbedViews.fragments.FusionesYokai;
+import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.DescripcionYokai;
+import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.EstadisticasYokai;
+import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.FusionesYokai;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 

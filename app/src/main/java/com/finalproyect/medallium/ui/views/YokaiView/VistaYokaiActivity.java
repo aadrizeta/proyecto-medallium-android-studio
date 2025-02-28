@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.views;
+package com.finalproyect.medallium.ui.views.YokaiView;
 
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -11,20 +11,16 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
-import com.finalproyect.medallium.ui.tabbedViews.adapter.ViewPagerAdapter;
+import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.adapter.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class VistaYokai extends AppCompatActivity {
+public class VistaYokaiActivity extends AppCompatActivity {
 
     private ImageView yokaiCircle;
 
@@ -46,7 +42,7 @@ public class VistaYokai extends AppCompatActivity {
         botonAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VistaYokai.this.finish();
+                VistaYokaiActivity.this.finish();
             }
         });
         ImageView favButton = findViewById(R.id.add_fav_button);
@@ -62,7 +58,7 @@ public class VistaYokai extends AppCompatActivity {
         botonAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(VistaYokai.this, "Agregado a la lista", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VistaYokaiActivity.this, "Agregado a la lista", Toast.LENGTH_SHORT).show();
                 toggleAddButton(botonAgregar);
             }
         });
@@ -153,22 +149,22 @@ public class VistaYokai extends AppCompatActivity {
         if (favButton.getTag().equals("black")) {
             favButton.setImageResource(R.drawable.usable_icon_red_fav_icon);
             favButton.setTag("red");
-            Toast.makeText(VistaYokai.this, "Añadido a favoritos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VistaYokaiActivity.this, "Añadido a favoritos", Toast.LENGTH_SHORT).show();
         } else {
             favButton.setImageResource(R.drawable.usable_icon_favorite_heart);
             favButton.setTag("black");
-            Toast.makeText(VistaYokai.this, "Eliminado de favoritos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VistaYokaiActivity.this, "Eliminado de favoritos", Toast.LENGTH_SHORT).show();
         }
     }
     public void toggleAddButton(ImageView addButton) {
         if (addButton.getTag().equals("black")) {
             addButton.setImageResource(R.drawable.baseline_check_circle_24);
             addButton.setTag("green");
-            Toast.makeText(VistaYokai.this, "Agregado a la lista", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VistaYokaiActivity.this, "Agregado a la lista", Toast.LENGTH_SHORT).show();
         } else {
             addButton.setImageResource(R.drawable.baseline_add_circle_outline_24);
             addButton.setTag("black");
-            Toast.makeText(VistaYokai.this, "Eliminado de la lista", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VistaYokaiActivity.this, "Eliminado de la lista", Toast.LENGTH_SHORT).show();
         }
     }
 }

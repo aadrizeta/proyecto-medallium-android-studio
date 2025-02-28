@@ -10,7 +10,7 @@
         android:id="@+id/navBar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/usable_icon_baseline_menu_24"
+        android:src="@drawable/usable_icon_burger_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

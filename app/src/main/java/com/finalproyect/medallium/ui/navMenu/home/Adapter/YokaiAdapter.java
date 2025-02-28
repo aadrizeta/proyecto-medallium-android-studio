@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
-import com.finalproyect.medallium.ui.views.VistaYokai;
+import com.finalproyect.medallium.ui.views.YokaiView.VistaYokaiActivity;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
@@ -152,7 +152,7 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
         notifyDataSetChanged();
     }
     private void launchYokaiView(Context context, DetallesYokai yokai){
-        Intent intent = new Intent(context, VistaYokai.class);
+        Intent intent = new Intent(context, VistaYokaiActivity.class);
         intent.putExtra("detallesYokai", yokai);
         context.startActivity(intent);
     }

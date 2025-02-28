@@ -53,7 +53,7 @@
             android:exported="false">
         </activity>
         <activity
-            android:name=".ui.views.VistaYokai"
+            android:name=".ui.views.YokaiView.VistaYokaiActivity"
             android:exported="false"/>
 
         <meta-data
