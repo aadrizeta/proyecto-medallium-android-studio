@@ -14,7 +14,7 @@ import com.finalproyect.medallium.R;
 
 public class DescripcionYokai extends Fragment {
 
-    private TextView descripcionYokai;
+    public TextView descripcionYokai;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

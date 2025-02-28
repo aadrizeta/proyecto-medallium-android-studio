@@ -1,6 +1,7 @@
 package com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.adapter;
 
 import androidx.annotation.NonNull;
+import androidx.collection.SparseArrayCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -10,6 +11,8 @@ import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.Estad
 import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.FusionesYokai;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
+
+    private final SparseArrayCompat<Fragment> registeredFragments = new SparseArrayCompat<>();
 
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
@@ -23,16 +26,26 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
+        Fragment fragment;
         switch (position) {
             case 0:
-                return new DescripcionYokai();
+                fragment = new DescripcionYokai();
+                break;
             case 1:
-                return new EstadisticasYokai();
+                fragment = new EstadisticasYokai();
+                break;
             case 2:
-                return new FusionesYokai();
+                fragment = new FusionesYokai();
+                break;
             default:
-                return new DescripcionYokai();
+                fragment = new DescripcionYokai();
+                break;
         }
+        registeredFragments.put(position, fragment);
+        return fragment;
+    }
+    public Fragment getRegisteredFragment(int position) {
+        return registeredFragments.get(position);
     }
 }
 

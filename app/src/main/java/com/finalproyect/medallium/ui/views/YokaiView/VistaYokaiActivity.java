@@ -26,8 +26,6 @@ public class VistaYokaiActivity extends AppCompatActivity {
     private ImageView yokaiCircle;
     private ViewPagerAdapter adapter;
     private ViewPager2 viewPager;
-    private DescripcionYokai descripcionYokai;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +111,15 @@ public class VistaYokaiActivity extends AppCompatActivity {
                 }
             }
         }).attach();
+        viewPager.post(() ->{
+           DescripcionYokai descripcionYokai = (DescripcionYokai) adapter.getRegisteredFragment(0);
+           if (descripcionYokai != null){
+               descripcionYokai.setDescripcion(yokai.getDescripcion());
+           } else {
+               Toast.makeText(this, "puto antonio", Toast.LENGTH_SHORT).show();
+           }
+        });
+        //descripcionYokai.setDescripcion("puto antonio");
     }
     private void changeCircleColor(int idTribu) {
         GradientDrawable drawable = (GradientDrawable) yokaiCircle.getDrawable();
