@@ -10,10 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:layout_marginHorizontal="80dp"
         >
 
         <LinearLayout
-            android:layout_width= "210dp"
+            android:layout_width= "0dp"
+            android:layout_weight="2"
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
@@ -26,7 +28,7 @@
                 android:text="Puntos de vida"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 />
@@ -39,7 +41,7 @@
                 android:text="Fuerza"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_marginTop="40dp"
                 android:textColor="@color/black"
                 />
@@ -52,7 +54,7 @@
                 android:text="ESP"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_marginTop="40dp"
                 android:textColor="@color/black"
                 />
@@ -65,7 +67,7 @@
                 android:text="Defensa"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_marginTop="40dp"
                 android:textColor="@color/black"
                 />
@@ -78,8 +80,9 @@
                 android:text="Velocidad"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_marginTop="40dp"
+                android:textColor="@color/black"
                 />
             <TextView
                 android:id="@+id/textView11"
@@ -89,7 +92,7 @@
                 android:text="Total"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_marginTop="40dp"
                 android:textColor="@color/black"
                 />
@@ -98,13 +101,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width= "match_parent"
+            android:layout_width= "0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical"
             >
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/hp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -116,7 +120,7 @@
                 />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/fuerza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -128,7 +132,7 @@
                 />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/esp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -140,7 +144,7 @@
                 />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/defensa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -152,7 +156,7 @@
                 />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/velocidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -164,7 +168,7 @@
                 />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/total"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"

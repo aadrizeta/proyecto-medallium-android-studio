@@ -76,6 +76,8 @@ public class VistaYokaiActivity extends AppCompatActivity {
         ImageView imagenRango = findViewById(R.id.imagen_rango);
 
         DetallesYokai yokai = (DetallesYokai) getIntent().getSerializableExtra("detallesYokai");
+        String dbComidas = yokai.getComida();
+        String[] comidas = dbComidas.split(", ");
 
         int idTribu = yokai.getYokai().getTribu().getId_Tribu();
         changeCircleColor(idTribu);
@@ -112,12 +114,16 @@ public class VistaYokaiActivity extends AppCompatActivity {
             }
         }).attach();
         viewPager.post(() ->{
-           DescripcionYokai descripcionYokai = (DescripcionYokai) adapter.getRegisteredFragment(0);
-           if (descripcionYokai != null){
-               descripcionYokai.setDescripcion(yokai.getDescripcion());
-           } else {
-               Toast.makeText(this, "puto antonio", Toast.LENGTH_SHORT).show();
-           }
+            DescripcionYokai descripcionYokai = (DescripcionYokai) adapter.getRegisteredFragment(0);
+            if (descripcionYokai != null){
+                descripcionYokai.setDescripcion(yokai.getDescripcion());
+                descripcionYokai.setMedallaImage(yokai.getMedalla());
+                descripcionYokai.setComidaYkw1(comidas[0]);
+                descripcionYokai.setComidaYkw2(comidas[1]);
+                descripcionYokai.setComidaYkw3(comidas[2]);
+            } else {
+                Toast.makeText(this, "puto antonio", Toast.LENGTH_SHORT).show();
+            }
         });
         //descripcionYokai.setDescripcion("puto antonio");
     }

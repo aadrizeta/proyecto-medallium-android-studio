@@ -41,11 +41,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/bangers"
                     android:text="Nombre"
                     android:textColor="#000000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    />
 
                 <TextView
                     android:id="@+id/nombre_japones"

@@ -56,15 +56,15 @@
 
             <TextView
                 android:id="@+id/nombre_yokai"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
-                android:layout_marginVertical="25dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="17dp"
-                android:text="Jibanyan" />
+                android:layout_marginVertical="15dp"
+                android:fontFamily="@font/komika"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:text="nombre" />
             <TextView
                 android:id="@+id/nombre_yokai_japones"
                 android:layout_width="wrap_content"

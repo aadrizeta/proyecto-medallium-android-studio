@@ -1,5 +1,8 @@
 package com.finalproyect.medallium.domain.entities;
 
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;

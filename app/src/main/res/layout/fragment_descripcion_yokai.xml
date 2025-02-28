@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="15dp">
 
         <TextView
             android:id="@+id/descripcion_yokai"
@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:text="Yo-Kai Watch  1"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/black"
@@ -59,13 +59,12 @@
                 <TextView
                     android:id="@+id/comida_ykw1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center_horizontal"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text="Comida"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -79,7 +78,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:text="@string/YKW2_name"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/black"
@@ -88,13 +87,12 @@
                 <TextView
                     android:id="@+id/comida_ykw2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center_horizontal"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text="Comida"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -109,7 +107,7 @@
                     android:id="@+id/textView16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:text="@string/YKW3_name"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/black"
@@ -118,11 +116,12 @@
                 <TextView
                     android:id="@+id/comida_ykw3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center_horizontal"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat"
                     android:text="Comida"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
 
             </LinearLayout>
 
@@ -148,6 +147,7 @@
                     android:gravity="center"
                     android:text="Habilidad"
                     android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="16sp"  />
 
@@ -177,13 +177,15 @@
                     android:gravity="center"
                     android:text="Medalla"
                     android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="16sp"  />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/medallaImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/logoprovisional" />
             </LinearLayout>
