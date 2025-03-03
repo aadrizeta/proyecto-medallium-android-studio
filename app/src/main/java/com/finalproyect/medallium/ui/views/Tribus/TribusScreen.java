@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.views;
+package com.finalproyect.medallium.ui.views.Tribus;
 
 import android.os.Bundle;
 import android.view.View;

@@ -24,7 +24,7 @@ import com.finalproyect.medallium.interfaces.ApiService;
 import com.finalproyect.medallium.ui.views.ElementosScreen;
 import com.finalproyect.medallium.ui.views.RangosScreen;
 import com.finalproyect.medallium.ui.views.SagaScreen;
-import com.finalproyect.medallium.ui.views.TribusScreen;
+import com.finalproyect.medallium.ui.views.Tribus.TribusScreen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private List<DetallesYokai> yokaiList = new ArrayList<>();
     private YokaiAdapter yokaiAdapter;
-    private static final String BASE_URL = "http://192.168.1.56:8080/";
+    private static final String BASE_URL = "http://192.168.11.62:8080/";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

@@ -1,6 +1,8 @@
 package com.finalproyect.medallium.interfaces;
 
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
+import com.finalproyect.medallium.domain.entities.Elemento;
+import com.finalproyect.medallium.domain.entities.Tribus;
 import com.finalproyect.medallium.domain.entities.Users;
 
 import java.util.List;
@@ -21,4 +23,11 @@ public interface ApiService {
 
     @GET("/api/detalles/get-detallesYokai")
     Call<List<DetallesYokai>> getDetallesYokai();
+
+    @GET("/api/tribus/get-tribus")
+    Call<List<Tribus>> getTribus();
+
+    @GET("/api/elemento/get-all-elementos")
+    Call<List<Elemento>> getAllElementos();
+
 }

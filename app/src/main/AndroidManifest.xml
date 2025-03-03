@@ -27,7 +27,7 @@
             android:name=".ui.views.SagaScreen"
             android:exported="false" />
         <activity
-            android:name=".ui.views.TribusScreen"
+            android:name=".ui.views.Tribus.TribusScreen"
             android:exported="false" />
         <activity
             android:name=".ui.views.RangosScreen"
