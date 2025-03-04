@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.finalproyect.medallium.Ejemplo;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.ui.views.YokaiView.VistaYokaiActivity;
@@ -39,6 +40,7 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
     @Override
     public void onBindViewHolder(YokaiViewHolder holder, int position) {
         DetallesYokai yokai = yokaiList.get(position);
+        Ejemplo ejemplo = new Ejemplo();
 
         holder.nombreYokai.setText(yokai.getYokai().getName());
         holder.nombreJapones.setText(yokai.getNombreJapo());
@@ -52,37 +54,7 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
                     .load(yokai.getYokai().getTribu().getImagenPixel())
                     .into(holder.tribeIcon);
             int idTribu = yokai.getYokai().getTribu().getId_Tribu();
-            switch (idTribu){
-                case 2:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_guapo));
-                    break;
-                case 3:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_valiente));
-                    break;
-                case 4:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_misterioso));
-                    break;
-                case 5:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_robusto));
-                    break;
-                case 6:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_oscuro));
-                    break;
-                case 7:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_siniestro));
-                    break;
-                case 8:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_amable));
-                    break;
-                case 9:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_maléfico));
-                    break;
-                case 10:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.tribu_color_escurridiza));
-                    break;
-                default:
-                    holder.yokaiCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.black));
-            }
+            ejemplo.setCardViewColor(holder.yokaiCardView, idTribu);
         }
 
         if (yokai.getYokai().getElemento() != null) {
@@ -120,7 +92,7 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
         ImageView elementIcon;
         ImageView rankButton;
         MaterialCardView yokaiCardView = itemView.findViewById(R.id.card_view);
-        ImageView favButton = yokaiCardView.findViewById(R.id.fav_button);
+        ImageView favButton;
 
 
         public YokaiViewHolder(View itemView) {

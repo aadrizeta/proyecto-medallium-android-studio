@@ -29,9 +29,6 @@ public class Ejemplo extends AppCompatActivity {
 
         View cardView = inflater.inflate(R.layout.yokai_cardview, mainContainer, false);
 
-        MaterialCardView yokaiCardView = cardView.findViewById(R.id.card_view);
-        yokaiCardView.setStrokeColor(getResources().getColor(R.color.tribu_color_guapo));
-
         ImageView yokaiImage = cardView.findViewById(R.id.yokai_image);
         yokaiImage.setImageResource(R.drawable.image8);
 
@@ -85,5 +82,40 @@ public class Ejemplo extends AppCompatActivity {
     }
     public static void regresar(Activity activity){
         activity.finish();
+    }
+    //metodo para cambiar los bordes de un cardView segun id de tribu
+    public void setCardViewColor(MaterialCardView cardView, int idTribu){
+        switch (idTribu){
+            case 2:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_guapo));
+                break;
+            case 3:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_valiente));
+                break;
+            case 4:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_misterioso));
+                break;
+            case 5:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_robusto));
+                break;
+            case 6:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_oscuro));
+                break;
+            case 7:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_siniestro));
+                break;
+            case 8:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_amable));
+                break;
+            case 9:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_maléfico));
+                break;
+            case 10:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.tribu_color_escurridiza));
+                break;
+            default:
+                cardView.setStrokeColor(cardView.getResources().getColor(R.color.black));
+
+        }
     }
 }

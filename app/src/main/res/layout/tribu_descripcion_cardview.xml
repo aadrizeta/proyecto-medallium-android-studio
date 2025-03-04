@@ -9,7 +9,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/tribus_descripcion"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,70 +28,72 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:orientation="horizontal"
-                android:layout_weight="0.2"
                 android:layout_gravity="center"
-                android:paddingHorizontal="70dp"
+                android:layout_marginTop="20dp"
+                android:paddingEnd="10dp"
                 >
-
-            <ImageView
-                android:id="@+id/tribu_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:layout_gravity="center"
-                />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2.5"
-                android:orientation="vertical">
-
                 <TextView
                     android:id="@+id/nombre_tribu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="30dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
                     android:fontFamily="@font/poppins"
-                    android:text="Nombre tribu"
+                    android:text="Tribu Escurridiza"
                     android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tribu_descripcion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="20dp"
-                    android:text="La Tribu Maléfica es una tribu introducida en Yo-kai Watch 2. Los Yo-kai maléficos se caracterizan por no recibir bonus de unidad al juntarse 2 o más Yo-kai maléficos, cosa que si reciben las otras tribus, por tener una gran resistencia a las espiritaciones (Al punto de rivalizar con los Yo-kai escurridizos, solo que los maléficos son resistentes por naturaleza y por separado, mientras que los escurridizos necesitan juntarse 2 o más), por tener unas estadísticas particularmente altas, y por no poder llevar equipado ningún objeto (salvo Malisnia). Las espiritaciones de los Yo-kai maléficos siempre son negativas, aunque sus animáximum pueden causar espiritaciones positivas. Hay Yo-kai maléficos atacantes físicos, atacantes elementales y curativos."
-                    android:textColor="#000000"
-                    android:textSize="17sp"
-                    android:layout_marginTop="15dp"
-                    android:scrollbars="vertical"
-                    android:textStyle="normal"
-                    android:fontFamily="@font/montserrat"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/tribu_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_launcher_foreground"
+                    android:layout_gravity="center"
                     />
-
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5.5"
-            android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            >
-
-            <Button
-                android:id="@+id/tribus_button"
+            <TextView
+                android:id="@+id/cualidad_principal"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Cualidad principal: Inducen cambios de estado"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:fontFamily="@font/montserrat"
+                android:paddingHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/caracteristicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Los yokai de esta tribu"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:fontFamily="@font/montserrat"
+                android:paddingHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/tribu_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="280dp"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="10dp"
+                android:text="La Tribu Maléfica es una tribu introducida en Yo-kai Watch 2. Los Yo-kai maléficos se caracterizan por no recibir bonus de unidad al juntarse 2 o más Yo-kai maléficos, cosa que si reciben las otras tribus, por tener una gran resistencia a las espiritaciones (Al punto de rivalizar con los Yo-kai escurridizos, solo que los maléficos son resistentes por naturaleza y por separado, mientras que los escurridizos necesitan juntarse 2 o más), por tener unas estadísticas particularmente altas, y por no poder llevar equipado ningún objeto (salvo Malisnia). Las espiritaciones de los Yo-kai maléficos siempre son negativas, aunque sus animáximum pueden causar espiritaciones positivas. Hay Yo-kai maléficos atacantes físicos, atacantes elementales y curativos."
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:layout_marginTop="15dp"
+                android:scrollbars="vertical"
+                android:fontFamily="@font/montserrat"
+                />
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/tribus_button"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="Ver Yo-kais de esta tribu"
                 android:textAlignment="center"
@@ -99,11 +101,10 @@
                 android:textColor="@color/black"
                 android:backgroundTint="#C5CACD"
                 android:fontFamily="@font/poppins"
+                android:layout_marginBottom="20dp"
                 >
 
             </Button>
-
-        </LinearLayout>
 
         </LinearLayout>
 
@@ -115,9 +116,8 @@
         android:layout_height="30dp"
         android:layout_margin="15dp"
         android:elevation="8dp"
-        app:srcCompat="@drawable/icon_baseline_close_24"
-        app:layout_constraintTop_toTopOf="@id/tribus_descripcion"
-        app:layout_constraintEnd_toEndOf="@id/tribus_descripcion"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_baseline_close_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
