@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxHeight="135dp"
+            android:layout_marginTop="10dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel dolor ut nulla consequat placerat ut at risus. Praesent euismod ex ut tincidunt varius. Integer viverra mauris id felis placerat, sed pellentesque elit fermentum. Aliquam erat volutpat. Vivamus venenatis libero sed felis cursus, vel ultricies ligula pharetra. Suspendisse potenti. Quisque egestas dui at sapien malesuada, at tincidunt tortor feugiat."
             android:fontFamily="@font/montserrat"
             android:textColor="@color/black"

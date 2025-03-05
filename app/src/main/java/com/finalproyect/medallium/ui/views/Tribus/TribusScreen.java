@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.finalproyect.medallium.BuildConfig;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.databinding.ActivityTribusScreenBinding;
 import com.finalproyect.medallium.domain.entities.RetrofitClient;
@@ -29,7 +30,7 @@ public class TribusScreen extends AppCompatActivity {
     private ActivityTribusScreenBinding binding;
     private TribuAdapter tribuAdapter;
     private List<Tribus> tribusList = new ArrayList<>();
-    private static final String BASE_URL = "http://192.168.11.62:8080/";
+    private String BASE_URL = BuildConfig.BASE_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

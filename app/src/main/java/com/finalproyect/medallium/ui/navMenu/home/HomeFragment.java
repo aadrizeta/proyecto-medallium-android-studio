@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.finalproyect.medallium.BuildConfig;
 import com.finalproyect.medallium.ui.navMenu.home.Adapter.YokaiAdapter;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.databinding.FragmentHomeBinding;
@@ -38,7 +39,7 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private List<DetallesYokai> yokaiList = new ArrayList<>();
     private YokaiAdapter yokaiAdapter;
-    private static final String BASE_URL = "http://192.168.11.62:8080/";
+    private static final String BASE_URL = BuildConfig.BASE_URL;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
