@@ -62,27 +62,27 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="30dp"
-
-                    android:paddingVertical="20dp">
+                    android:paddingStart="30dp"
+                    android:paddingEnd="40dp"
+                    android:paddingVertical="22dp">
 
                     <ImageView
                         android:id="@+id/tribe_icon"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_launcher_foreground" />
+                        app:srcCompat="@drawable/logoprovisional" />
 
                     <ImageView
                         android:id="@+id/element_icon"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/ic_launcher_foreground" />
 
                     <ImageView
                         android:id="@+id/rank_button"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/ic_launcher_foreground" />
