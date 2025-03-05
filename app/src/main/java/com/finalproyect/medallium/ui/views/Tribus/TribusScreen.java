@@ -60,7 +60,6 @@ public class TribusScreen extends AppCompatActivity {
     private void loadTribus(String url){
         ApiService apiService = RetrofitClient.getClient(url).create(ApiService.class);
         Call<List<Tribus>> call = apiService.getTribus();
-
         call.enqueue(new Callback<>() {
             @Override
             public void onResponse(Call<List<Tribus>> call, Response<List<Tribus>> response) {

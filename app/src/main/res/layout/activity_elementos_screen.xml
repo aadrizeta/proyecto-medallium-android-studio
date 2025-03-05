@@ -5,34 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.views.ElementosScreen">
+    tools:context=".ui.views.Elementos.ElementosScreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"
-
-        >
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/rangosTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Elementos"
-            android:textSize="35dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/black"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="Elementos"
+            android:textColor="@color/black"
+            android:textSize="35dp"
             android:textStyle="bold"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/backButton"
@@ -42,8 +43,29 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_baseline_arrow_back_24"
-            />
+            app:srcCompat="@drawable/icon_baseline_arrow_back_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintHeight_default="spread"
+        android:paddingHorizontal="35dp"
+        android:paddingBottom="20dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewElementos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/container_recyclerview" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

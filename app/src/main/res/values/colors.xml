@@ -22,4 +22,12 @@
     <color name="botonRango">#8B87C0</color>
     <color name="botonFase">#28BBEE</color>
     <color name="ejemplo">#CA443C</color>
+    <color name="elemento_agua">#6CBBBD</color>
+    <color name="elemento_fuego">#B65F60</color>
+    <color name="elemento_hielo">#305C76</color>
+    <color name="elemento_viento">#74CEA7</color>
+    <color name="elemento_tierra">#AC9B7A</color>
+    <color name="elemento_relampago">#D9BD57</color>
+    <color name="elemento_absorcion">#C792D0</color>
+    <color name="elemento_sanacion">#A1C595</color>
 </resources>
