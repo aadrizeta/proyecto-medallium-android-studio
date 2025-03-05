@@ -11,13 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <FrameLayout
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:layout_gravity="center_horizontal|center_vertical"
@@ -49,14 +50,14 @@
 
             <ImageView
                 android:id="@+id/tribe_icon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:srcCompat="@drawable/logoprovisional"
                 android:layout_gravity="bottom|center"/>
 
             <TextView
                 android:id="@+id/nombre_yokai"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
                 android:layout_marginVertical="15dp"
@@ -64,7 +65,8 @@
                 android:textStyle="bold"
                 android:textColor="#000000"
                 android:textAlignment="center"
-                android:textSize="25dp"
+                android:textSize="18dp"
+                android:layout_marginTop="100000dp"
                 android:text="nombre" />
             <TextView
                 android:id="@+id/nombre_yokai_japones"
@@ -80,7 +82,7 @@
                 android:id="@+id/imagen_yokai"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="18dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 app:srcCompat="@drawable/logoprovisional" />
         </FrameLayout>
@@ -95,7 +97,7 @@
             <ImageView
                 android:layout_marginStart="20dp"
                 android:id="@+id/add_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/baseline_add_circle_outline_24"

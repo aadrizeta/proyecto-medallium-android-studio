@@ -1,7 +1,5 @@
 package com.finalproyect.medallium.ui.views.Tribus;
 
-import static java.security.AccessController.getContext;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,7 +29,7 @@ public class TribusScreen extends AppCompatActivity {
     private ActivityTribusScreenBinding binding;
     private TribuAdapter tribuAdapter;
     private List<Tribus> tribusList = new ArrayList<>();
-    private static final String BASE_URL = "http://192.168.1.56:8080/";
+    private static final String BASE_URL = "http://192.168.11.62:8080/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,12 +68,6 @@ public class TribusScreen extends AppCompatActivity {
                     tribusList.clear();
                     tribusList.addAll(response.body());
                     tribuAdapter.notifyDataSetChanged();
-//                    if (tribusList == null){
-//                        Toast.makeText(TribusScreen.this, "No hay tribus", Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        int tribusSize = tribusList.size();
-//                        Toast.makeText(TribusScreen.this, "Tribus cargados" + tribusSize, Toast.LENGTH_SHORT).show();
-//                    }
                 } else {
                     Log.e("Error en la respuesta de la API: ", response.message());
                     Toast.makeText(TribusScreen.this, "Error al cargar las tribus", Toast.LENGTH_SHORT).show();
