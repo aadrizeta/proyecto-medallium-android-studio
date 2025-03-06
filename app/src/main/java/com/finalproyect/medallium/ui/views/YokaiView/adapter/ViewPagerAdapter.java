@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.adapter;
+package com.finalproyect.medallium.ui.views.YokaiView.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.collection.SparseArrayCompat;

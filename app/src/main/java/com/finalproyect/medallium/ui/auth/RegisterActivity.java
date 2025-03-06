@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.finalproyect.medallium.BuildConfig;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.RetrofitClient;
 import com.finalproyect.medallium.domain.entities.Users;
@@ -30,8 +31,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText confirmPasswordEditText;
     private Button registerButton;
     private Retrofit retrofit;
-    private ApiService apiService;
     private TextView loginClickable;
+    private String BASE_URL = BuildConfig.BASE_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +46,6 @@ public class RegisterActivity extends AppCompatActivity {
         confirmPasswordEditText = findViewById(R.id.confirm_password);
         registerButton = findViewById(R.id.login_button);
         loginClickable = findViewById(R.id.login_clickable);
-
-        retrofit = RetrofitClient.getClient("http://192.168.11.62:8080");
-        apiService = retrofit.create(ApiService.class);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         Users.User newUser = new Users.User(firstName, email, lastName, password, null, null);
 
+        ApiService apiService = RetrofitClient.getClient(BASE_URL).create(ApiService.class);
         Call<Users.User> call = apiService.registerUser(newUser);
         call.enqueue(new Callback<Users.User>() {
             @Override

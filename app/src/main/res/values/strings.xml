@@ -14,6 +14,7 @@
     <string name="underlineId"><u>ID de Usuario</u></string>
     <string name="underlineRegister"><u>Registrate</u></string>
     <string name="underlineLogin"><u>Inicia sesión</u></string>
+    <string name="underlineElementos"><u>Ver Yo-kais de este elemento</u></string>
     <string name="underlineProfile"><u>Datos Personales</u></string>
     <string name="underlineCerrarSesion"><u>Cerrar Sesión</u></string>
     <string name="title_activity_drawer_navigation">DrawerNavigationActivity</string>
