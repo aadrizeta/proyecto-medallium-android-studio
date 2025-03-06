@@ -2,6 +2,7 @@ package com.finalproyect.medallium.interfaces;
 
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.domain.entities.Elemento;
+import com.finalproyect.medallium.domain.entities.LoginRequest;
 import com.finalproyect.medallium.domain.entities.Tribus;
 import com.finalproyect.medallium.domain.entities.Users;
 
@@ -19,7 +20,7 @@ public interface ApiService {
     Call<Users.User> registerUser(@Body Users.User user);
 
     @POST("/api/users/login")
-    Call<Users.User> loginUser(@Body Users.User user);
+    Call<Users.User> loginUser(@Body LoginRequest request);
 
     @GET("/api/detalles/get-detallesYokai")
     Call<List<DetallesYokai>> getDetallesYokai();
