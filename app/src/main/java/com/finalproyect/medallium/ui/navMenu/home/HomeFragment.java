@@ -22,10 +22,10 @@ import com.finalproyect.medallium.databinding.FragmentHomeBinding;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.domain.entities.RetrofitClient;
 import com.finalproyect.medallium.interfaces.ApiService;
-import com.finalproyect.medallium.ui.views.Elementos.ElementosScreen;
+import com.finalproyect.medallium.ui.views.ElementosScreen;
 import com.finalproyect.medallium.ui.views.RangosScreen;
 import com.finalproyect.medallium.ui.views.SagaScreen;
-import com.finalproyect.medallium.ui.views.Tribus.TribusScreen;
+import com.finalproyect.medallium.ui.views.TribusScreen;
 
 import java.util.ArrayList;
 import java.util.List;

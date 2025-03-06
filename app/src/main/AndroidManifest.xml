@@ -21,13 +21,13 @@
             android:label="@string/title_activity_drawer_navigation"
             android:theme="@style/Theme.MyApplication.NoActionBar"/>
         <activity
-            android:name=".ui.views.Elementos.ElementosScreen"
+            android:name=".ui.views.ElementosScreen"
             android:exported="false" />
         <activity
             android:name=".ui.views.SagaScreen"
             android:exported="false" />
         <activity
-            android:name=".ui.views.Tribus.TribusScreen"
+            android:name=".ui.views.TribusScreen"
             android:exported="false" />
         <activity
             android:name=".ui.views.RangosScreen"

@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.views.Elementos;
+package com.finalproyect.medallium.ui.views;
 
 import android.os.Bundle;
 import android.util.Log;
