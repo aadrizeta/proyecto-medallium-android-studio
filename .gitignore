@@ -13,5 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-/app/build.gradle.kts
 .idea
+app/build.gradle.kts
