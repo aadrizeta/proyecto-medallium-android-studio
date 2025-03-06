@@ -14,11 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.finalproyect.medallium.BuildConfig;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.databinding.ActivityElementosScreenBinding;
-import com.finalproyect.medallium.databinding.ActivityTribusScreenBinding;
 import com.finalproyect.medallium.domain.entities.Elemento;
 import com.finalproyect.medallium.domain.entities.RetrofitClient;
 import com.finalproyect.medallium.interfaces.ApiService;
-import com.finalproyect.medallium.ui.views.Tribus.TribusScreen;
+import com.finalproyect.medallium.ui.Adapters.ElementosAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

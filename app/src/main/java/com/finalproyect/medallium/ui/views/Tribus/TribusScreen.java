@@ -17,6 +17,7 @@ import com.finalproyect.medallium.databinding.ActivityTribusScreenBinding;
 import com.finalproyect.medallium.domain.entities.RetrofitClient;
 import com.finalproyect.medallium.domain.entities.Tribus;
 import com.finalproyect.medallium.interfaces.ApiService;
+import com.finalproyect.medallium.ui.Adapters.TribuAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

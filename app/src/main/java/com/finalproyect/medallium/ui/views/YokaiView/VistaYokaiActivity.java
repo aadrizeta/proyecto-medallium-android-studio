@@ -16,7 +16,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
-import com.finalproyect.medallium.ui.views.YokaiView.adapter.ViewPagerAdapter;
+import com.finalproyect.medallium.ui.Adapters.ViewPagerAdapter;
 import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.DescripcionYokai;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;

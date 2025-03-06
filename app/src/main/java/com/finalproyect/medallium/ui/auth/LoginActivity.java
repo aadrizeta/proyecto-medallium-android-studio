@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.finalproyect.medallium.BuildConfig;
 import com.finalproyect.medallium.MainActivity;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.LoginRequest;
@@ -29,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordEditText;
     private ApiService apiService;
 
+    private String BASE_URL = BuildConfig.BASE_URL;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +43,9 @@ public class LoginActivity extends AppCompatActivity {
         Button loginButton = findViewById(R.id.login_button);
         TextView registerClickable = findViewById(R.id.register_clickable);
 
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.56:8080")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.finalproyect.medallium.BuildConfig;
-import com.finalproyect.medallium.ui.navMenu.home.Adapter.YokaiAdapter;
+import com.finalproyect.medallium.ui.Adapters.YokaiAdapter;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.databinding.FragmentHomeBinding;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;

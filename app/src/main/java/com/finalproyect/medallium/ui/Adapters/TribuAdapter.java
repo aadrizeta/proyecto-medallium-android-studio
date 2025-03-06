@@ -1,4 +1,4 @@
-package com.finalproyect.medallium.ui.views.Tribus;
+package com.finalproyect.medallium.ui.Adapters;
 
 import android.content.Context;
 import android.text.method.ScrollingMovementMethod;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
