@@ -3,8 +3,10 @@ package com.finalproyect.medallium.interfaces;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.domain.entities.Elemento;
 import com.finalproyect.medallium.domain.entities.LoginRequest;
+import com.finalproyect.medallium.domain.entities.Rango;
 import com.finalproyect.medallium.domain.entities.Tribus;
 import com.finalproyect.medallium.domain.entities.Users;
+import com.finalproyect.medallium.ui.views.RangosScreen;
 
 import java.util.List;
 
@@ -30,5 +32,8 @@ public interface ApiService {
 
     @GET("/api/elemento/get-all-elementos")
     Call<List<Elemento>> getAllElementos();
+
+    @GET("/api/rango/get-rango")
+    Call<List<Rango>> getRango();
 
 }
