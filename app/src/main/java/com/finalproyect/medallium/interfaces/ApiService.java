@@ -4,6 +4,7 @@ import com.finalproyect.medallium.domain.entities.DatosCombate;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.domain.entities.Elemento;
 import com.finalproyect.medallium.domain.entities.LoginRequest;
+import com.finalproyect.medallium.domain.entities.Rango;
 import com.finalproyect.medallium.domain.entities.Tribus;
 import com.finalproyect.medallium.domain.entities.Users;
 
@@ -34,5 +35,8 @@ public interface ApiService {
 
     @POST("/api/datosCombate/getDatosCombateByName")
     Call<DatosCombate> getDatosCombateByName(@Body String nombre);
+
+    @GET("/api/rango/get-rango")
+    Call<List<Rango>> getRango();
 
 }

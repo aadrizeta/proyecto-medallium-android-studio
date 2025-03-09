@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginVertical="15dp"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/main_background"
+        android:elevation="20dp"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/black"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/rango_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Rango"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginTop="17dp"
+                    />
+                <TextView
+                    android:id="@+id/Descripcion_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Descripción"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/rango_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fáciles de encontrar en las primeras áreas. Muchos evolucionan a mejores rangos. "
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:fontFamily="@font/montserrat"
+                    />
+
+                <TextView
+                    android:id="@+id/Caracteristicas_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Caracteristicas Generales"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/rango_caracteristicas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Débiles, comunes en el inicio del juego."
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:fontFamily="@font/montserrat"
+                    />
+
+                <TextView
+                    android:id="@+id/TipoBonus_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Tipo de Bonus"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/rango_tipoBonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bajo ataque y defensa, pero sirven como base para evoluciones."
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:fontFamily="@font/montserrat"
+                    />
+
+                <TextView
+                    android:id="@+id/rango_clickable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/underlineRangos"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    android:textColor="#1A3A93"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/rango_logo"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/image23"
+                android:layout_gravity="top"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

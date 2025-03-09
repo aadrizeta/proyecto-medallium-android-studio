@@ -25,6 +25,7 @@ public class TribuAdapter  extends RecyclerView.Adapter<TribuAdapter.TribusViewH
 
     private List<Tribus> tribuList;
     private View tribuView;
+    private AlertDialog alertDialog;
 
     public TribuAdapter(List<Tribus> tribuList) {
         this.tribuList = tribuList;
@@ -64,20 +65,24 @@ public class TribuAdapter  extends RecyclerView.Adapter<TribuAdapter.TribusViewH
     public int getItemCount() {
         return tribuList != null ? tribuList.size() : 0;
     }
+
     public static class TribusViewHolder extends RecyclerView.ViewHolder{
 
         MaterialCardView tribuCardView = itemView.findViewById(R.id.card_view);
         TextView nombreTribu;
         TextView nombreJapones;
         ImageView logoTribu;
+        ImageView cerrarModal;
 
-        public TribusViewHolder( View itemView) {
+        public TribusViewHolder(View itemView) {
             super(itemView);
             nombreTribu = itemView.findViewById(R.id.nombre_tribu);
             nombreJapones = itemView.findViewById(R.id.nombre_japones);
             logoTribu = itemView.findViewById(R.id.tribu_logo);
+            cerrarModal = itemView.findViewById(R.id.close);
         }
     }
+
     private void mostrarInfo(Context context, Tribus tribu){
         Ejemplo ejemplo = new Ejemplo();
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -87,10 +92,20 @@ public class TribuAdapter  extends RecyclerView.Adapter<TribuAdapter.TribusViewH
         TextView cualidadPrincipal = tribuView.findViewById(R.id.cualidad_principal);
         TextView tipoBonus = tribuView.findViewById(R.id.caracteristicas);
         ImageView logoTribu = tribuView.findViewById(R.id.tribu_logo);
+        ImageView cerrarModal = tribuView.findViewById(R.id.close);
         TextView descripcionTribu = tribuView.findViewById(R.id.tribu_descripcion);
         descripcionTribu.setMovementMethod(new ScrollingMovementMethod());
 
         ejemplo.setCardViewColor(cardView, tribu.getId_Tribu());
+
+        cerrarModal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (alertDialog != null && alertDialog.isShowing()) {
+                    alertDialog.dismiss();
+                }
+            }
+        });
 
         nombreTribu.setText("Tribu " + tribu.getNombre());
         cualidadPrincipal.setText("Los Yo-kai de esta tribu: " + tribu.getCaracteristicasGenerales());
@@ -98,7 +113,7 @@ public class TribuAdapter  extends RecyclerView.Adapter<TribuAdapter.TribusViewH
         Glide.with(context).load(tribu.getImage()).into(logoTribu);
         descripcionTribu.setText(tribu.getDescripcion());
 
-        AlertDialog alertDialog = new MaterialAlertDialogBuilder(context)
+        alertDialog = new MaterialAlertDialogBuilder(context)
                 .setView(tribuView)
                 .create();
         alertDialog.show();
