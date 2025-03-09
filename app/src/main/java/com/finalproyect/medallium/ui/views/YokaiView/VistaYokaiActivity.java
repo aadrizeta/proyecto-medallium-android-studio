@@ -14,18 +14,32 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
+import com.finalproyect.medallium.BuildConfig;
 import com.finalproyect.medallium.R;
+import com.finalproyect.medallium.domain.entities.DatosCombate;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
+import com.finalproyect.medallium.domain.entities.RetrofitClient;
+import com.finalproyect.medallium.interfaces.ApiService;
 import com.finalproyect.medallium.ui.Adapters.ViewPagerAdapter;
 import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.DescripcionYokai;
+import com.finalproyect.medallium.ui.views.YokaiView.tabbedViews.fragments.EstadisticasYokai;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class VistaYokaiActivity extends AppCompatActivity {
 
     private ImageView yokaiCircle;
     private ViewPagerAdapter adapter;
     private ViewPager2 viewPager;
+
+    private DatosCombate datosCombate;
+
+    private String BASE_URL = BuildConfig.BASE_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +50,7 @@ public class VistaYokaiActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.viewPager);
 
+        datosCombate = new DatosCombate();
         TextView nombreYokai = findViewById(R.id.nombre_yokai);
         TextView nombreJapones = findViewById(R.id.nombre_yokai_japones);
         ImageView imagenYokai = findViewById(R.id.imagen_yokai);
@@ -66,8 +81,6 @@ public class VistaYokaiActivity extends AppCompatActivity {
             }
         });
 
-
-
         yokaiCircle = findViewById(R.id.background_circle);
 
         TextView nombreElemento = findViewById(R.id.nombre_elemento);
@@ -76,6 +89,7 @@ public class VistaYokaiActivity extends AppCompatActivity {
         ImageView imagenRango = findViewById(R.id.imagen_rango);
 
         DetallesYokai yokai = (DetallesYokai) getIntent().getSerializableExtra("detallesYokai");
+        loadDatosCombate(BASE_URL, yokai);
         String dbComidas = yokai.getComida();
         String[] comidas = dbComidas.split(", ");
 
@@ -122,6 +136,20 @@ public class VistaYokaiActivity extends AppCompatActivity {
                 descripcionYokai.setComidaYkw2(comidas[1]);
                 descripcionYokai.setComidaYkw3(comidas[2]);
             } else {
+                Toast.makeText(this, "puto antonio", Toast.LENGTH_SHORT).show();
+            }
+        });
+        viewPager.post(() ->{
+            EstadisticasYokai estadisticasYokai = (EstadisticasYokai) adapter.getRegisteredFragment(1);
+            if (estadisticasYokai != null){
+                estadisticasYokai.setHp(datosCombate.getPuntos_vida());
+                estadisticasYokai.setDefensa(datosCombate.getDefensa());
+                estadisticasYokai.setEsp(datosCombate.getEspiritacion());
+                estadisticasYokai.setFuerza(datosCombate.getFuerza());
+                estadisticasYokai.setVelocidad(datosCombate.getVelocidad());
+                estadisticasYokai.setTotal(datosCombate.getTotal());
+            }
+            else{
                 Toast.makeText(this, "puto antonio", Toast.LENGTH_SHORT).show();
             }
         });
@@ -184,5 +212,29 @@ public class VistaYokaiActivity extends AppCompatActivity {
             addButton.setTag("black");
             Toast.makeText(VistaYokaiActivity.this, "Eliminado de la lista", Toast.LENGTH_SHORT).show();
         }
+    }
+    private void loadDatosCombate(String url, DetallesYokai yokai){
+        ApiService apiService = RetrofitClient.getClient(url).create(ApiService.class);
+        Call<DatosCombate> call = apiService.getDatosCombateByName(yokai.getYokai().getName());
+        call.enqueue(new Callback<DatosCombate>() {
+            @Override
+            public void onResponse(Call<DatosCombate> call, Response<DatosCombate> response) {
+                if (response.body() != null){
+                    DatosCombate llamadadatos = response.body();
+
+                    datosCombate.setPuntos_vida(llamadadatos.getPuntos_vida());
+                    datosCombate.setDefensa(llamadadatos.getDefensa());
+                    datosCombate.setEspiritacion(llamadadatos.getEspiritacion());
+                    datosCombate.setFuerza(llamadadatos.getFuerza());
+                    datosCombate.setVelocidad(llamadadatos.getVelocidad());
+                    datosCombate.setHabilidad(llamadadatos.getHabilidad());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DatosCombate> call, Throwable throwable) {
+
+            }
+        });
     }
 }

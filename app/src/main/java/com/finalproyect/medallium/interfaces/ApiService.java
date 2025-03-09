@@ -1,5 +1,6 @@
 package com.finalproyect.medallium.interfaces;
 
+import com.finalproyect.medallium.domain.entities.DatosCombate;
 import com.finalproyect.medallium.domain.entities.DetallesYokai;
 import com.finalproyect.medallium.domain.entities.Elemento;
 import com.finalproyect.medallium.domain.entities.LoginRequest;
@@ -30,5 +31,8 @@ public interface ApiService {
 
     @GET("/api/elemento/get-all-elementos")
     Call<List<Elemento>> getAllElementos();
+
+    @POST("/api/datosCombate/getDatosCombateByName")
+    Call<DatosCombate> getDatosCombateByName(@Body String nombre);
 
 }
