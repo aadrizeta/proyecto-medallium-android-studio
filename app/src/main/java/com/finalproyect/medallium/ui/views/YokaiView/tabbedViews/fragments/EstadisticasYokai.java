@@ -13,12 +13,12 @@ import com.finalproyect.medallium.R;
 
 public class EstadisticasYokai extends Fragment {
 
-    TextView hp;
-    TextView fuerza;
-    TextView esp;
-    TextView defensa;
-    TextView velocidad;
-    TextView total;
+    public TextView hp;
+    public TextView fuerza;
+    public TextView esp;
+    public TextView defensa;
+    public TextView velocidad;
+    public TextView total;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

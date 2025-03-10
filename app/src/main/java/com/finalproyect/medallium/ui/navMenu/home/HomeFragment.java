@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.finalproyect.medallium.BuildConfig;
+import com.finalproyect.medallium.domain.entities.DatosCombate;
 import com.finalproyect.medallium.ui.Adapters.YokaiAdapter;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.databinding.FragmentHomeBinding;

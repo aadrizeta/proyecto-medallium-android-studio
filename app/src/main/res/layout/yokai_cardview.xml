@@ -8,7 +8,7 @@
     >
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_view"
+        android:id="@+id/card_view_tribu"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,8 +109,8 @@
         android:layout_margin="10dp"
         android:elevation="8dp"
         app:srcCompat="@drawable/usable_icon_favorite_heart"
-        app:layout_constraintTop_toTopOf="@id/card_view"
-        app:layout_constraintEnd_toEndOf="@id/card_view"
+        app:layout_constraintTop_toTopOf="@id/card_view_tribu"
+        app:layout_constraintEnd_toEndOf="@id/card_view_tribu"
         />
 
 

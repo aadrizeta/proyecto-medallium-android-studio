@@ -91,7 +91,7 @@ public class YokaiAdapter extends RecyclerView.Adapter<YokaiAdapter.YokaiViewHol
         ImageView tribeIcon;
         ImageView elementIcon;
         ImageView rankButton;
-        MaterialCardView yokaiCardView = itemView.findViewById(R.id.card_view);
+        MaterialCardView yokaiCardView = itemView.findViewById(R.id.card_view_tribu);
         ImageView favButton;
 
 

@@ -1,6 +1,8 @@
 package com.finalproyect.medallium;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -13,6 +15,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.finalproyect.medallium.ui.views.YokaiListView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -69,6 +72,12 @@ public class Ejemplo extends AppCompatActivity {
             // Cierra el diálogo al hacer clic en el botón cerrar
             cerrar.setOnClickListener(v1 -> alertDialog.dismiss());
         });
+    }
+    public void launchListView(Context context, String identificador, int value) {
+        Intent intent = new Intent(context, YokaiListView.class);
+        intent.putExtra("origin", identificador);
+        intent.putExtra("id", value);
+        context.startActivity(intent);
     }
 
     public void toggleFavButton(ImageView favButton) {

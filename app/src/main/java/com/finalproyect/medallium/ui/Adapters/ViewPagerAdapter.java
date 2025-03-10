@@ -1,5 +1,7 @@
 package com.finalproyect.medallium.ui.Adapters;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.collection.SparseArrayCompat;
 import androidx.fragment.app.Fragment;
@@ -41,6 +43,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
                 fragment = new DescripcionYokai();
                 break;
         }
+        Log.d("ViewPagerAdapter", "Fragment creado en posición: " + position);
         registeredFragments.put(position, fragment);
         return fragment;
     }

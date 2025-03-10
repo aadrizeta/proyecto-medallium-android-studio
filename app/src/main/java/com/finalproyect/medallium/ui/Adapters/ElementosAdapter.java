@@ -1,5 +1,6 @@
 package com.finalproyect.medallium.ui.Adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.finalproyect.medallium.Ejemplo;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.Elemento;
 import com.google.android.material.card.MaterialCardView;
@@ -34,12 +36,14 @@ public class ElementosAdapter extends RecyclerView.Adapter<ElementosAdapter.Elem
     @Override
     public void onBindViewHolder(ElementosViewHolder holder, int position) {
 
+        Ejemplo ejemplo = new Ejemplo();
         Elemento elemento = elementoList.get(position);
         holder.nombreElemento.setText(elemento.getNombre());
         holder.descripcionElemento.setText(elemento.getDescripcion());
 
         Glide.with(holder.itemView.getContext()).load(elemento.getImage()).into(holder.logoElemento);
         int idElemento = elemento.getId_Elemento();
+
         switch (idElemento){
             case 1:
                 holder.elementoCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.elemento_hielo));
@@ -69,6 +73,14 @@ public class ElementosAdapter extends RecyclerView.Adapter<ElementosAdapter.Elem
                 holder.elementoCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.black));
                 break;
         }
+        holder.clickable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //mostrar id elemento en log
+                Log.d("idElemento", String.valueOf(idElemento));
+                ejemplo.launchListView(v.getContext(), "elementos", idElemento);
+            }
+        });
     }
 
     @Override
@@ -77,16 +89,18 @@ public class ElementosAdapter extends RecyclerView.Adapter<ElementosAdapter.Elem
     }
 
     public static class ElementosViewHolder extends RecyclerView.ViewHolder{
-        MaterialCardView elementoCardView = itemView.findViewById(R.id.card_view);
+        MaterialCardView elementoCardView = itemView.findViewById(R.id.card_view_tribu);
         TextView nombreElemento;
         TextView descripcionElemento;
         ImageView logoElemento;
+        TextView clickable;
 
         public ElementosViewHolder(View itemView) {
             super(itemView);
             nombreElemento = itemView.findViewById(R.id.elemento_nombre);
             descripcionElemento = itemView.findViewById(R.id.elemento_descripcion);
             logoElemento = itemView.findViewById(R.id.elemento_logo);
+            clickable = itemView.findViewById(R.id.elemento_clickable);
         }
     }
 }

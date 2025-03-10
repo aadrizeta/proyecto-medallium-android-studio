@@ -1,15 +1,27 @@
 package com.finalproyect.medallium.domain.entities;
 
-public class DatosCombate {
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+public class DatosCombate implements Serializable {
 
     private int id_datoscombate;
+    @SerializedName("fuerza")
     private int fuerza;
+    @SerializedName("defensa")
     private int defensa;
-    private int puntos_vida;
+    @SerializedName("puntosVida")
+    private int puntosVida;
+    @SerializedName("velocidad")
     private int velocidad;
+    @SerializedName("espiritacion")
     private int espiritacion;
+    @SerializedName("total")
     private int total;
+    @SerializedName("yokai")
     private Yokai yokai;
+    @SerializedName("habilidad")
     private String habilidad;
 
     public int getId_datoscombate() {
@@ -36,12 +48,12 @@ public class DatosCombate {
         this.defensa = defensa;
     }
 
-    public int getPuntos_vida() {
-        return puntos_vida;
+    public int getPuntosVida() {
+        return puntosVida;
     }
 
-    public void setPuntos_vida(int puntos_vida) {
-        this.puntos_vida = puntos_vida;
+    public void setPuntosVida(int puntosVida) {
+        this.puntosVida = puntosVida;
     }
 
     public int getVelocidad() {

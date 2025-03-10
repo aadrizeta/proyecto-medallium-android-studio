@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.finalproyect.medallium.Ejemplo;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.Rango;
 import com.google.android.material.card.MaterialCardView;
@@ -34,6 +35,7 @@ public class RangosAdapter extends RecyclerView.Adapter<RangosAdapter.RangosView
     @Override
     public void onBindViewHolder(RangosViewHolder holder, int position) {
 
+        Ejemplo ejemplo = new Ejemplo();
         Rango rango = rangoList.get(position);
         holder.nombreRango.setText(rango.getName());
         holder.descripcionRango.setText(rango.getDescripcion());
@@ -62,6 +64,12 @@ public class RangosAdapter extends RecyclerView.Adapter<RangosAdapter.RangosView
                 holder.rangoCardView.setStrokeColor(holder.itemView.getResources().getColor(R.color.elemento_absorcion));
                 break;
         }
+        holder.clickable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ejemplo.launchListView(v.getContext(), "rango", idRango);
+            }
+        });
     }
 
     @Override
@@ -70,14 +78,13 @@ public class RangosAdapter extends RecyclerView.Adapter<RangosAdapter.RangosView
     }
 
     public static class RangosViewHolder extends RecyclerView.ViewHolder{
-        MaterialCardView rangoCardView = itemView.findViewById(R.id.card_view);
+        MaterialCardView rangoCardView = itemView.findViewById(R.id.card_view_tribu);
         TextView nombreRango;
         TextView descripcionRango;
-
         TextView caracteristicasRango;
-
         TextView tipoBonusRango;
         ImageView logoRango;
+        TextView clickable;
 
         public RangosViewHolder(View itemView) {
             super(itemView);
@@ -86,6 +93,7 @@ public class RangosAdapter extends RecyclerView.Adapter<RangosAdapter.RangosView
             caracteristicasRango = itemView.findViewById(R.id.rango_caracteristicas);
             tipoBonusRango = itemView.findViewById(R.id.rango_tipoBonus);
             logoRango = itemView.findViewById(R.id.rango_logo);
+            clickable = itemView.findViewById(R.id.rango_clickable);
         }
     }
 }

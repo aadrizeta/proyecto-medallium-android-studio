@@ -5,8 +5,10 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.finalproyect.medallium.Ejemplo;
 import com.finalproyect.medallium.R;
 import com.finalproyect.medallium.domain.entities.Tribus;
+import com.finalproyect.medallium.ui.views.TribusScreen;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -68,7 +71,7 @@ public class TribuAdapter  extends RecyclerView.Adapter<TribuAdapter.TribusViewH
 
     public static class TribusViewHolder extends RecyclerView.ViewHolder{
 
-        MaterialCardView tribuCardView = itemView.findViewById(R.id.card_view);
+        MaterialCardView tribuCardView = itemView.findViewById(R.id.card_view_tribu);
         TextView nombreTribu;
         TextView nombreJapones;
         ImageView logoTribu;
@@ -95,6 +98,13 @@ public class TribuAdapter  extends RecyclerView.Adapter<TribuAdapter.TribusViewH
         ImageView cerrarModal = tribuView.findViewById(R.id.close);
         TextView descripcionTribu = tribuView.findViewById(R.id.tribu_descripcion);
         descripcionTribu.setMovementMethod(new ScrollingMovementMethod());
+        Button verYokai = tribuView.findViewById(R.id.tribus_button);
+        verYokai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ejemplo.launchListView(v.getContext(), "tribus", tribu.getId_Tribu());
+            }
+        });
 
         ejemplo.setCardViewColor(cardView, tribu.getId_Tribu());
 

@@ -20,6 +20,7 @@ public class DescripcionYokai extends Fragment {
     public TextView comidaYkw1;
     public TextView comidaYkw2;
     public TextView comidaYkw3;
+    public TextView habilidadYokai;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +34,7 @@ public class DescripcionYokai extends Fragment {
         comidaYkw1 = view.findViewById(R.id.comida_ykw1);
         comidaYkw2 = view.findViewById(R.id.comida_ykw2);
         comidaYkw3 = view.findViewById(R.id.comida_ykw3);
+        habilidadYokai = view.findViewById(R.id.habilidad);
 
         return view;
     }
@@ -54,5 +56,9 @@ public class DescripcionYokai extends Fragment {
 
     public void setComidaYkw3(String comida) {
         comidaYkw3.setText(comida);
+    }
+
+    public void setHabilidadYokai(String habilidad){
+        habilidadYokai.setText(habilidad);
     }
 }
